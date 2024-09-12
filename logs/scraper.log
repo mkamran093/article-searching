@@ -1,0 +1,78 @@
+2024-09-13 03:06:23,060 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-09-13 03:06:23,669 - root - INFO - Starting web scraper
+2024-09-13 03:06:23,680 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-09-13 03:06:23,685 - root - INFO - Successfully created Google Sheets service
+2024-09-13 03:06:25,906 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-09-13 03:06:27,437 - root - INFO - Found 11 search results
+2024-09-13 03:06:27,438 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:06:29,209 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:06:29,210 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:06:30,264 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:06:30,270 - root - INFO - Paragraph extracted
+2024-09-13 03:06:30,271 - root - INFO - Fetching content from URL: https://finance.yahoo.com/quote/CURLF/press-releases/
+2024-09-13 03:06:31,538 - root - ERROR - An error occurred while fetching https://finance.yahoo.com/quote/CURLF/press-releases/: 0, message='', url='https://finance.yahoo.com/quote/CURLF/press-releases/'
+2024-09-13 03:06:31,539 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
+2024-09-13 03:06:32,538 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
+2024-09-13 03:06:32,539 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:06:33,018 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:06:33,021 - root - INFO - Paragraph extracted
+2024-09-13 03:06:33,025 - root - INFO - Found relevant information from 2 links
+2024-09-13 03:06:33,026 - root - INFO - Updating Google Sheets
+2024-09-13 03:06:33,506 - root - INFO - Updated 8 cells in Google Sheets
+2024-09-13 03:06:33,511 - root - INFO - Searching Google for query: "CBD" "Sales" "$" "Germany"
+2024-09-13 03:06:34,910 - root - INFO - Found 13 search results
+2024-09-13 03:06:34,911 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:06:37,277 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:06:37,279 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:06:38,454 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:06:38,456 - root - INFO - Paragraph extracted
+2024-09-13 03:06:38,457 - root - INFO - Fetching content from URL: https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
+2024-09-13 03:06:39,655 - root - INFO - Fetched 23624 characters of text from https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
+2024-09-13 03:06:39,657 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:06:40,161 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:06:40,163 - root - INFO - Paragraph extracted
+2024-09-13 03:06:40,166 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
+2024-09-13 03:06:40,942 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
+2024-09-13 03:06:40,943 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:06:41,524 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:06:41,526 - root - INFO - Paragraph extracted
+2024-09-13 03:06:41,529 - root - INFO - Fetching content from URL: https://static.spokanecity.org/documents/bcc/committees/urban-development/agendas/2024/09/urbdev-agenda-2024-09-09.pdf
+2024-09-13 03:06:42,492 - root - INFO - PDF detected: https://static.spokanecity.org/documents/bcc/committees/urban-development/agendas/2024/09/urbdev-agenda-2024-09-09.pdf
+2024-09-13 03:07:45,065 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-09-13 03:07:45,675 - root - INFO - Starting web scraper
+2024-09-13 03:07:45,685 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-09-13 03:07:45,690 - root - INFO - Successfully created Google Sheets service
+2024-09-13 03:07:47,731 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-09-13 03:07:49,300 - root - INFO - Found 11 search results
+2024-09-13 03:07:49,301 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:07:50,937 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:07:50,939 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:07:51,976 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:07:51,987 - root - INFO - Paragraph extracted
+2024-09-13 03:07:51,989 - root - INFO - Fetching content from URL: https://finance.yahoo.com/quote/CURLF/press-releases/
+2024-09-13 03:07:53,110 - root - ERROR - An error occurred while fetching https://finance.yahoo.com/quote/CURLF/press-releases/: 0, message='', url='https://finance.yahoo.com/quote/CURLF/press-releases/'
+2024-09-13 03:07:53,110 - root - INFO - Fetching content from URL: https://www.jmu.edu/financeoffice/_files/avp-finance-files/dept_listing_numeric.pdf
+2024-09-13 03:07:53,609 - root - ERROR - An error occurred while fetching https://www.jmu.edu/financeoffice/_files/avp-finance-files/dept_listing_numeric.pdf: Cannot connect to host www.jmu.edu:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2024-09-13 03:07:53,610 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
+2024-09-13 03:07:54,443 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
+2024-09-13 03:07:54,444 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:07:54,995 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:07:54,998 - root - INFO - Paragraph extracted
+2024-09-13 03:07:55,001 - root - INFO - Found relevant information from 2 links
+2024-09-13 03:07:55,001 - root - INFO - Updating Google Sheets
+2024-09-13 03:07:55,508 - root - INFO - Updated 8 cells in Google Sheets
+2024-09-13 03:07:55,512 - root - INFO - Searching Google for query: "CBD" "Sales" "$" "Germany"
+2024-09-13 03:07:56,699 - root - INFO - Found 13 search results
+2024-09-13 03:07:56,700 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:07:58,342 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
+2024-09-13 03:07:58,345 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:07:58,911 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:07:58,913 - root - INFO - Paragraph extracted
+2024-09-13 03:07:58,916 - root - INFO - Fetching content from URL: https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
+2024-09-13 03:07:59,748 - root - INFO - Fetched 23624 characters of text from https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
+2024-09-13 03:07:59,749 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-09-13 03:08:00,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-13 03:08:00,519 - root - INFO - Paragraph extracted
+2024-09-13 03:08:00,521 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
+2024-09-13 03:08:02,310 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
+2024-09-13 03:08:02,311 - root - INFO - Extracting relevant paragraph with OpenAI

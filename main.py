@@ -193,15 +193,24 @@ async def extract_text_from_pdf(pdf_content: bytes) -> str:
     return text
 
 
+import os
+import csv
+from typing import List
+
 def save_to_csv(filename: str, data: List[List[str]]):
     file_exists = os.path.isfile(filename)
     existing_data = set()
+    header_exists = False
 
     # Read existing data if file exists
     if file_exists:
         with open(filename, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.reader(file)
-            next(reader, None)  # Skip header
+            first_row = next(reader, None)
+            if first_row == ["Keywords", "Link", "Relevant Paragraph"]:
+                header_exists = True
+            else:
+                file.seek(0)  # Reset file pointer to beginning
             existing_data = set(tuple(row) for row in reader)
 
     # Open file in append mode if it exists, otherwise in write mode
@@ -209,8 +218,8 @@ def save_to_csv(filename: str, data: List[List[str]]):
     with open(filename, mode=mode, newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         
-        # Write header if file is new
-        if not file_exists:
+        # Write header if file is new or doesn't have the header
+        if not file_exists or not header_exists:
             writer.writerow(["Keywords", "Link", "Relevant Paragraph"])
         
         # Write new, non-duplicate data
@@ -220,7 +229,7 @@ def save_to_csv(filename: str, data: List[List[str]]):
                 writer.writerow(row)
                 new_rows += 1
         
-    logger.info(f"Added {new_rows} new rows to {filename}")
+    print(f"Added {new_rows} new rows to {filename}")
 
 async def update_in_sheets(service, data: List[List[str]]):
     logger.info("Updating Google Sheets")
