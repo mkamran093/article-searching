@@ -1,78 +1,1514 @@
-2024-09-13 03:06:23,060 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
-2024-09-13 03:06:23,669 - root - INFO - Starting web scraper
-2024-09-13 03:06:23,680 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
-2024-09-13 03:06:23,685 - root - INFO - Successfully created Google Sheets service
-2024-09-13 03:06:25,906 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
-2024-09-13 03:06:27,437 - root - INFO - Found 11 search results
-2024-09-13 03:06:27,438 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:06:29,209 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:06:29,210 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:06:30,264 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:06:30,270 - root - INFO - Paragraph extracted
-2024-09-13 03:06:30,271 - root - INFO - Fetching content from URL: https://finance.yahoo.com/quote/CURLF/press-releases/
-2024-09-13 03:06:31,538 - root - ERROR - An error occurred while fetching https://finance.yahoo.com/quote/CURLF/press-releases/: 0, message='', url='https://finance.yahoo.com/quote/CURLF/press-releases/'
-2024-09-13 03:06:31,539 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
-2024-09-13 03:06:32,538 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
-2024-09-13 03:06:32,539 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:06:33,018 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:06:33,021 - root - INFO - Paragraph extracted
-2024-09-13 03:06:33,025 - root - INFO - Found relevant information from 2 links
-2024-09-13 03:06:33,026 - root - INFO - Updating Google Sheets
-2024-09-13 03:06:33,506 - root - INFO - Updated 8 cells in Google Sheets
-2024-09-13 03:06:33,511 - root - INFO - Searching Google for query: "CBD" "Sales" "$" "Germany"
-2024-09-13 03:06:34,910 - root - INFO - Found 13 search results
-2024-09-13 03:06:34,911 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:06:37,277 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:06:37,279 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:06:38,454 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:06:38,456 - root - INFO - Paragraph extracted
-2024-09-13 03:06:38,457 - root - INFO - Fetching content from URL: https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
-2024-09-13 03:06:39,655 - root - INFO - Fetched 23624 characters of text from https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
-2024-09-13 03:06:39,657 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:06:40,161 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:06:40,163 - root - INFO - Paragraph extracted
-2024-09-13 03:06:40,166 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
-2024-09-13 03:06:40,942 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
-2024-09-13 03:06:40,943 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:06:41,524 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:06:41,526 - root - INFO - Paragraph extracted
-2024-09-13 03:06:41,529 - root - INFO - Fetching content from URL: https://static.spokanecity.org/documents/bcc/committees/urban-development/agendas/2024/09/urbdev-agenda-2024-09-09.pdf
-2024-09-13 03:06:42,492 - root - INFO - PDF detected: https://static.spokanecity.org/documents/bcc/committees/urban-development/agendas/2024/09/urbdev-agenda-2024-09-09.pdf
-2024-09-13 03:07:45,065 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
-2024-09-13 03:07:45,675 - root - INFO - Starting web scraper
-2024-09-13 03:07:45,685 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
-2024-09-13 03:07:45,690 - root - INFO - Successfully created Google Sheets service
-2024-09-13 03:07:47,731 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
-2024-09-13 03:07:49,300 - root - INFO - Found 11 search results
-2024-09-13 03:07:49,301 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:07:50,937 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22THC%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=4&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:07:50,939 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:07:51,976 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:07:51,987 - root - INFO - Paragraph extracted
-2024-09-13 03:07:51,989 - root - INFO - Fetching content from URL: https://finance.yahoo.com/quote/CURLF/press-releases/
-2024-09-13 03:07:53,110 - root - ERROR - An error occurred while fetching https://finance.yahoo.com/quote/CURLF/press-releases/: 0, message='', url='https://finance.yahoo.com/quote/CURLF/press-releases/'
-2024-09-13 03:07:53,110 - root - INFO - Fetching content from URL: https://www.jmu.edu/financeoffice/_files/avp-finance-files/dept_listing_numeric.pdf
-2024-09-13 03:07:53,609 - root - ERROR - An error occurred while fetching https://www.jmu.edu/financeoffice/_files/avp-finance-files/dept_listing_numeric.pdf: Cannot connect to host www.jmu.edu:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
-2024-09-13 03:07:53,610 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
-2024-09-13 03:07:54,443 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
-2024-09-13 03:07:54,444 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:07:54,995 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:07:54,998 - root - INFO - Paragraph extracted
-2024-09-13 03:07:55,001 - root - INFO - Found relevant information from 2 links
-2024-09-13 03:07:55,001 - root - INFO - Updating Google Sheets
-2024-09-13 03:07:55,508 - root - INFO - Updated 8 cells in Google Sheets
-2024-09-13 03:07:55,512 - root - INFO - Searching Google for query: "CBD" "Sales" "$" "Germany"
-2024-09-13 03:07:56,699 - root - INFO - Found 13 search results
-2024-09-13 03:07:56,700 - root - INFO - Fetching content from URL: https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:07:58,342 - root - INFO - Fetched 131 characters of text from https://maps.google.com/maps?q=%22CBD%22+%22Sales%22+%22%24%22+%22Germany%22+after:9/9/2024+before:9/9/2024&num=10&um=1&ie=UTF-8&ved=1t:200713&ictx=111
-2024-09-13 03:07:58,345 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:07:58,911 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:07:58,913 - root - INFO - Paragraph extracted
-2024-09-13 03:07:58,916 - root - INFO - Fetching content from URL: https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
-2024-09-13 03:07:59,748 - root - INFO - Fetched 23624 characters of text from https://eulerpool.com/en/stock/1933-Industries-Umsatz-CA65442F1053/Umsatz
-2024-09-13 03:07:59,749 - root - INFO - Extracting relevant paragraph with OpenAI
-2024-09-13 03:08:00,517 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2024-09-13 03:08:00,519 - root - INFO - Paragraph extracted
-2024-09-13 03:08:00,521 - root - INFO - Fetching content from URL: https://www.freightwaves.com/news
-2024-09-13 03:08:02,310 - root - INFO - Fetched 29568 characters of text from https://www.freightwaves.com/news
-2024-09-13 03:08:02,311 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:06:33,843 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:06:33,858 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:06:33,861 - root - INFO - Starting web scraper
+2024-10-15 04:06:35,179 - root - INFO - Successfully refreshed the token
+2024-10-15 04:06:35,181 - root - INFO - Saved new token.json file
+2024-10-15 04:06:35,196 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:06:35,270 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:06:37,604 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:06:41,187 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:06:41,189 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:06:41,193 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:06:53,725 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:06:53,728 - root - INFO - Extracting relevant data with OpenAI
+2024-10-15 04:07:06,460 - root - INFO - Data extracted
+2024-10-15 04:07:06,461 - root - ERROR - Failed to parse JSON response
+2024-10-15 04:07:06,462 - root - ERROR - Error processing row 1: cannot access local variable 'required_fields' where it is not associated with a value
+2024-10-15 04:07:06,504 - root - ERROR - Traceback (most recent call last):
+  File "c:\Users\NeXbit\Desktop\article-searching\main.py", line 492, in extract_relevant_data
+    parsed_result = json.loads(result)
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NeXbit\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NeXbit\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NeXbit\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 3 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\NeXbit\Desktop\article-searching\main.py", line 696, in main
+    relevant_paragraph = extract_relevant_data(content, keywords, instructions)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\NeXbit\Desktop\article-searching\main.py", line 503, in extract_relevant_data
+    return {field: None for field in required_fields}
+                                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'required_fields' where it is not associated with a value
+
+2024-10-15 04:07:06,512 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:07:09,943 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 04:07:09,944 - root - INFO - Total new Google search results found: 10
+2024-10-15 04:07:09,948 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:07:12,149 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:07:12,152 - root - INFO - Extracting relevant data with OpenAI
+2024-10-15 04:07:16,530 - root - INFO - Data extracted
+2024-10-15 04:07:16,531 - root - ERROR - Failed to parse JSON response
+2024-10-15 04:07:16,532 - root - ERROR - Error processing row 2: cannot access local variable 'required_fields' where it is not associated with a value
+2024-10-15 04:07:16,536 - root - ERROR - Traceback (most recent call last):
+  File "c:\Users\NeXbit\Desktop\article-searching\main.py", line 492, in extract_relevant_data
+    parsed_result = json.loads(result)
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NeXbit\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NeXbit\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\NeXbit\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\NeXbit\Desktop\article-searching\main.py", line 696, in main
+    relevant_paragraph = extract_relevant_data(content, keywords, instructions)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\NeXbit\Desktop\article-searching\main.py", line 503, in extract_relevant_data
+    return {field: None for field in required_fields}
+                                     ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'required_fields' where it is not associated with a value
+
+2024-10-15 04:07:16,546 - root - INFO - Web scraper finished
+2024-10-15 04:29:23,885 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:29:23,888 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:29:23,892 - root - INFO - Starting web scraper
+2024-10-15 04:29:23,914 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:29:23,920 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:29:26,530 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:29:30,019 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:29:30,020 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:29:30,021 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:29:48,935 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:29:48,940 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:29:48,940 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:29:48,941 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:29:52,059 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:29:52,064 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:29:52,065 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:29:52,067 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:29:55,538 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 04:29:55,539 - root - INFO - Total new Google search results found: 10
+2024-10-15 04:29:55,540 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:30:00,756 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:30:00,758 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:30:00,759 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:30:00,760 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:30:03,249 - root - INFO - Fetched 184 characters of text from https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:30:03,254 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:30:03,255 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:30:03,257 - root - INFO - Fetching content from URL: https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 04:30:05,637 - root - INFO - Fetched 9377 characters of text from https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 04:30:05,640 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:30:05,641 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:30:05,642 - root - INFO - Fetching content from URL: https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 04:30:07,626 - root - INFO - Fetched 4968 characters of text from https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 04:30:07,629 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:30:07,630 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:30:07,630 - root - INFO - Fetching content from URL: https://www.bbc.com/news/world-europe-jersey-66055356
+2024-10-15 04:31:04,947 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:31:04,949 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:31:04,954 - root - INFO - Starting web scraper
+2024-10-15 04:31:04,964 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:31:04,970 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:31:07,308 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:31:11,881 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:31:11,882 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:31:11,883 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:31:23,848 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:31:23,851 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:31:23,852 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:31:23,853 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:31:26,685 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:31:26,689 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:31:26,690 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:31:26,692 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:31:31,340 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 04:31:31,341 - root - INFO - Total new Google search results found: 10
+2024-10-15 04:31:31,342 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:31:33,702 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:31:33,706 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:31:33,706 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:31:33,707 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:31:36,981 - root - INFO - Fetched 184 characters of text from https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:34:42,289 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:34:42,291 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:34:42,295 - root - INFO - Starting web scraper
+2024-10-15 04:34:42,306 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:34:42,312 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:34:44,609 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:34:48,093 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:34:48,094 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:34:48,095 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:35:00,382 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:35:00,385 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:35:00,386 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:35:00,386 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:35:02,421 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:35:02,424 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:35:02,424 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:35:02,426 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:35:05,826 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 04:35:05,827 - root - INFO - Total new Google search results found: 10
+2024-10-15 04:35:05,828 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:35:08,072 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:35:08,076 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:35:08,077 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:35:08,077 - root - INFO - Fetching content from URL: https://www.reddit.com/r/england/comments/1bmj5p2/the_uks_cannabis_market_is_worth_over_33_billion/
+2024-10-15 04:35:13,580 - root - INFO - Fetched 2021 characters of text from https://www.reddit.com/r/england/comments/1bmj5p2/the_uks_cannabis_market_is_worth_over_33_billion/
+2024-10-15 04:35:13,583 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:35:13,583 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:35:13,584 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:36:40,592 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:36:40,594 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:36:40,598 - root - INFO - Starting web scraper
+2024-10-15 04:36:40,608 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:36:40,614 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:36:42,898 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:36:46,383 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:36:46,384 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:36:46,385 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:36:58,425 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:36:58,428 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:36:58,429 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:36:58,429 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:37:00,500 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:37:00,504 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:37:00,505 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:37:00,507 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:37:04,013 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 04:37:04,015 - root - INFO - Total new Google search results found: 10
+2024-10-15 04:37:04,016 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:37:53,718 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:37:53,720 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:37:53,725 - root - INFO - Starting web scraper
+2024-10-15 04:37:53,735 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:37:53,741 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:37:55,905 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:37:59,399 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:37:59,399 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:37:59,400 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:38:11,464 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:38:11,467 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:38:11,467 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:38:11,468 - root - INFO - Fetching content from URL: https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 04:38:14,174 - root - INFO - Fetched 9129 characters of text from https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 04:38:14,178 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:38:14,179 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 04:38:14,181 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:41:22,212 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:41:22,214 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:41:22,219 - root - INFO - Starting web scraper
+2024-10-15 04:41:22,228 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:41:22,234 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:41:24,588 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:41:28,103 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:41:28,104 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:41:28,105 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:41:39,931 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:41:39,934 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:41:41,677 - openai - INFO - error_code=invalid_value error_message="Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'." error_param=response_format.type error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:41:41,678 - root - ERROR - Error calling OpenAI API: Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'.
+2024-10-15 04:41:41,679 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:41:43,801 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:41:43,806 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:41:44,145 - openai - INFO - error_code=invalid_value error_message="Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'." error_param=response_format.type error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:41:44,146 - root - ERROR - Error calling OpenAI API: Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'.
+2024-10-15 04:41:44,148 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:41:48,747 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 04:41:48,748 - root - INFO - Total new Google search results found: 10
+2024-10-15 04:41:48,749 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:41:51,360 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 04:41:51,364 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:41:51,709 - openai - INFO - error_code=invalid_value error_message="Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'." error_param=response_format.type error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:41:51,711 - root - ERROR - Error calling OpenAI API: Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'.
+2024-10-15 04:41:51,713 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:41:54,791 - root - INFO - Fetched 184 characters of text from https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 04:41:54,795 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:41:55,104 - openai - INFO - error_code=invalid_value error_message="Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'." error_param=response_format.type error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:41:55,106 - root - ERROR - Error calling OpenAI API: Invalid value: 'json'. Supported values are: 'json_object', 'json_schema', and 'text'.
+2024-10-15 04:41:55,108 - root - INFO - Fetching content from URL: https://www.reddit.com/r/england/comments/1bmj5p2/the_uks_cannabis_market_is_worth_over_33_billion/
+2024-10-15 04:42:49,463 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:42:49,465 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:42:49,470 - root - INFO - Starting web scraper
+2024-10-15 04:42:49,480 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:42:49,486 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:42:51,645 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:42:56,329 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:42:56,330 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:42:56,330 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:43:08,448 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:43:08,451 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:43:09,574 - openai - INFO - error_code=missing_required_parameter error_message="Missing required parameter: 'response_format.json_schema'." error_param=response_format.json_schema error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:43:09,575 - root - ERROR - Error calling OpenAI API: Missing required parameter: 'response_format.json_schema'.
+2024-10-15 04:43:09,577 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:43:12,114 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:43:12,117 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:43:13,704 - openai - INFO - error_code=missing_required_parameter error_message="Missing required parameter: 'response_format.json_schema'." error_param=response_format.json_schema error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:43:13,706 - root - ERROR - Error calling OpenAI API: Missing required parameter: 'response_format.json_schema'.
+2024-10-15 04:43:13,709 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 04:48:48,687 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 04:48:48,690 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 04:48:48,695 - root - INFO - Starting web scraper
+2024-10-15 04:48:48,705 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 04:48:48,711 - root - INFO - Successfully created Google Sheets service
+2024-10-15 04:48:51,554 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 04:48:55,051 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 04:48:55,051 - root - INFO - Total new Google search results found: 2
+2024-10-15 04:48:55,052 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:49:08,267 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 04:49:08,270 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:49:09,998 - openai - INFO - error_code=None error_message="Invalid parameter: 'response_format' of type 'json_object' is not supported with this model." error_param=response_format error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:49:10,000 - root - ERROR - Error calling OpenAI API: Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.
+2024-10-15 04:49:10,005 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:49:12,292 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 04:49:12,296 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 04:49:12,668 - openai - INFO - error_code=None error_message="Invalid parameter: 'response_format' of type 'json_object' is not supported with this model." error_param=response_format error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 04:49:12,670 - root - ERROR - Error calling OpenAI API: Invalid parameter: 'response_format' of type 'json_object' is not supported with this model.
+2024-10-15 04:49:12,673 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 05:11:46,579 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 05:11:46,582 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 05:11:46,587 - root - INFO - Starting web scraper
+2024-10-15 05:11:47,865 - root - INFO - Successfully refreshed the token
+2024-10-15 05:11:47,866 - root - INFO - Saved new token.json file
+2024-10-15 05:11:47,874 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 05:11:47,881 - root - INFO - Successfully created Google Sheets service
+2024-10-15 05:11:50,626 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 05:11:54,352 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 05:11:54,353 - root - INFO - Total new Google search results found: 2
+2024-10-15 05:11:54,354 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 05:12:07,201 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 05:12:07,204 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 05:12:08,890 - openai - INFO - error_code=None error_message="Invalid schema for response_format 'article-result': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Missing 'paragrpah'." error_param=response_format error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 05:12:08,892 - root - ERROR - Error calling OpenAI API: Invalid schema for response_format 'article-result': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Missing 'paragrpah'.
+2024-10-15 05:12:08,895 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 05:12:11,055 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 05:12:11,058 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 05:12:11,417 - openai - INFO - error_code=None error_message="Invalid schema for response_format 'article-result': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Missing 'paragrpah'." error_param=response_format error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2024-10-15 05:12:11,420 - root - ERROR - Error calling OpenAI API: Invalid schema for response_format 'article-result': In context=(), 'required' is required to be supplied and to be an array including every key in properties. Missing 'paragrpah'.
+2024-10-15 05:12:11,423 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 05:17:25,004 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 05:17:25,005 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 05:17:25,010 - root - INFO - Starting web scraper
+2024-10-15 05:17:25,032 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 05:17:25,038 - root - INFO - Successfully created Google Sheets service
+2024-10-15 05:17:27,537 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 05:17:32,218 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 05:17:32,219 - root - INFO - Total new Google search results found: 2
+2024-10-15 05:17:32,220 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 05:17:44,025 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 05:17:44,028 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 05:17:44,028 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 05:17:44,029 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 05:17:46,389 - root - INFO - Fetched 16103 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 05:17:46,393 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 05:17:46,394 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 05:17:46,396 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 05:17:49,963 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 05:17:49,964 - root - INFO - Total new Google search results found: 10
+2024-10-15 05:17:49,965 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 05:17:52,703 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 05:17:52,706 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 05:17:52,707 - root - ERROR - Error calling OpenAI API: Object of type ModelMetaclass is not JSON serializable
+2024-10-15 05:17:52,708 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 22:17:30,832 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:17:30,857 - root - INFO - Loaded 14 scraped URLs from scraped_urls.json
+2024-10-15 22:17:30,861 - root - INFO - Starting web scraper
+2024-10-15 22:17:32,203 - root - INFO - Successfully refreshed the token
+2024-10-15 22:17:32,206 - root - INFO - Saved new token.json file
+2024-10-15 22:17:32,222 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:17:32,301 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:17:35,010 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:17:38,597 - root - INFO - Fetched 2 new links from Goddddogle page 1
+2024-10-15 22:17:38,598 - root - INFO - Total new Google search results found: 2
+2024-10-15 22:17:38,602 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:17:52,134 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:17:52,138 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:17:52,139 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:17:52,139 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:17:58,533 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:17:58,543 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:17:58,544 - root - INFO - Checking again with OpenAI
+2024-10-15 22:17:58,544 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:17:58,547 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 22:18:01,043 - root - INFO - Fetched 16132 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 22:18:01,047 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:01,047 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:01,047 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:18:04,585 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:18:04,589 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:18:04,592 - root - INFO - Saved 15 scraped URLs to scraped_urls.json
+2024-10-15 22:18:04,593 - root - INFO - No relevant paragraph found for URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-15 22:18:04,597 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 22:18:08,090 - root - INFO - Fetched 10 new links from Goddddogle page 1
+2024-10-15 22:18:08,091 - root - INFO - Total new Google search results found: 10
+2024-10-15 22:18:08,095 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 22:18:11,938 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 22:18:11,940 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:11,941 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:11,942 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:18:17,130 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:18:17,134 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:18:17,135 - root - INFO - Checking again with OpenAI
+2024-10-15 22:18:17,136 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:18:17,142 - root - INFO - Fetching content from URL: https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:18:19,888 - root - INFO - Fetched 9377 characters of text from https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:18:19,891 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:19,892 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:19,893 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:18:26,871 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:18:26,874 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:18:26,875 - root - INFO - Checking again with OpenAI
+2024-10-15 22:18:26,876 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:18:26,881 - root - INFO - Fetching content from URL: https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 22:18:29,224 - root - INFO - Fetched 14194 characters of text from https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 22:18:29,227 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:29,228 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:29,228 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:18:34,213 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:18:34,216 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:18:34,217 - root - INFO - Checking again with OpenAI
+2024-10-15 22:18:34,218 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:18:34,223 - root - INFO - Fetching content from URL: https://www.bbc.com/news/world-europe-jersey-66055356
+2024-10-15 22:18:37,135 - root - INFO - Fetched 4449 characters of text from https://www.bbc.com/news/world-europe-jersey-66055356
+2024-10-15 22:18:37,138 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:37,139 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:37,140 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:18:40,746 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2024-10-15 22:18:40,748 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.427199 seconds
+2024-10-15 22:18:43,338 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2024-10-15 22:18:43,339 - anthropic._base_client - INFO - Retrying request to /v1/messages in 0.951101 seconds
+2024-10-15 22:18:44,996 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 529 "
+2024-10-15 22:18:44,999 - root - ERROR - Error calling OpenAI API: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}}
+2024-10-15 22:18:45,002 - root - INFO - Saved 16 scraped URLs to scraped_urls.json
+2024-10-15 22:18:45,004 - root - INFO - No relevant paragraph found for URL: https://www.bbc.com/news/world-europe-jersey-66055356
+2024-10-15 22:18:45,006 - root - INFO - Fetching content from URL: https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 22:18:47,426 - root - INFO - Fetched 4968 characters of text from https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 22:18:47,430 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:47,431 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:47,431 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:18:52,910 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:18:52,912 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:18:52,913 - root - INFO - Checking again with OpenAI
+2024-10-15 22:18:52,913 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:18:52,916 - root - INFO - Fetching content from URL: https://gmtrends.mmu.ac.uk/wp-content/uploads/sites/425/2024/10/GM-TRENDS-2023-24-THC-Vapes.pdf
+2024-10-15 22:18:57,119 - root - INFO - PDF detected: https://gmtrends.mmu.ac.uk/wp-content/uploads/sites/425/2024/10/GM-TRENDS-2023-24-THC-Vapes.pdf
+2024-10-15 22:18:57,120 - root - INFO - Extracting text from PDF
+2024-10-15 22:18:58,515 - root - INFO - Extracted 82633 characters from PDF
+2024-10-15 22:18:58,518 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:18:58,519 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:18:58,519 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:19:00,465 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:19:00,468 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:19:00,470 - root - INFO - Saved 17 scraped URLs to scraped_urls.json
+2024-10-15 22:19:00,472 - root - INFO - No relevant paragraph found for URL: https://gmtrends.mmu.ac.uk/wp-content/uploads/sites/425/2024/10/GM-TRENDS-2023-24-THC-Vapes.pdf
+2024-10-15 22:19:00,473 - root - INFO - Fetching content from URL: https://www.kingsleynapley.co.uk/insights/blogs/regulatory-blog/court-of-appeal-ruling-raises-hope-for-clarification-on-cbd-legal-status
+2024-10-15 22:19:03,269 - root - INFO - Fetched 15082 characters of text from https://www.kingsleynapley.co.uk/insights/blogs/regulatory-blog/court-of-appeal-ruling-raises-hope-for-clarification-on-cbd-legal-status
+2024-10-15 22:19:03,271 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:19:03,272 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:19:03,272 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:19:06,733 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:19:06,737 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:19:06,738 - root - INFO - Checking again with OpenAI
+2024-10-15 22:19:06,739 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:19:06,744 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 22:19:09,276 - root - INFO - Fetched 184 characters of text from https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 22:19:09,280 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:19:09,282 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:19:09,283 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:19:13,674 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:19:13,677 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:19:13,681 - root - INFO - Saved 18 scraped URLs to scraped_urls.json
+2024-10-15 22:19:13,682 - root - INFO - No relevant paragraph found for URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 22:19:13,684 - root - INFO - Fetching content from URL: https://iea.org.uk/wp-content/uploads/2018/06/DP90_Legalising-cannabis_web-1.pdf
+2024-10-15 22:19:16,623 - root - INFO - PDF detected: https://iea.org.uk/wp-content/uploads/2018/06/DP90_Legalising-cannabis_web-1.pdf
+2024-10-15 22:19:16,624 - root - INFO - Extracting text from PDF
+2024-10-15 22:19:17,560 - root - INFO - Extracted 63299 characters from PDF
+2024-10-15 22:19:17,563 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:19:17,564 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:19:17,565 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:19:21,357 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:19:21,360 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:19:21,361 - root - INFO - Checking again with OpenAI
+2024-10-15 22:19:21,363 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:19:21,368 - root - INFO - Fetching content from URL: https://lyphe.com/how-much-is-weed/
+2024-10-15 22:19:24,024 - root - INFO - Fetched 26263 characters of text from https://lyphe.com/how-much-is-weed/
+2024-10-15 22:19:24,027 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:19:24,028 - root - ERROR - Error calling OpenAI API: module 'openai' has no attribute 'ChatCompletions'
+2024-10-15 22:19:24,028 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:19:31,726 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:19:31,730 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:19:31,731 - root - INFO - Checking again with OpenAI
+2024-10-15 22:19:31,732 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:19:31,738 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Pakistan"
+2024-10-15 22:19:43,094 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:19:43,109 - root - INFO - Loaded 18 scraped URLs from scraped_urls.json
+2024-10-15 22:19:43,117 - root - INFO - Starting web scraper
+2024-10-15 22:19:43,136 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:19:43,143 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:19:45,273 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:19:48,790 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-15 22:19:48,791 - root - INFO - Total new Google search results found: 2
+2024-10-15 22:19:48,792 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:19:59,871 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:19:59,875 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:19:59,876 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:19:59,879 - root - INFO - Fetching content from URL: https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 22:20:02,157 - root - INFO - Fetched 9199 characters of text from https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 22:20:02,160 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:20:02,161 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:20:02,165 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 22:20:05,635 - root - INFO - Fetched 7 new links from Google page 1
+2024-10-15 22:20:05,636 - root - INFO - Total new Google search results found: 7
+2024-10-15 22:20:05,637 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 22:20:08,286 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 22:20:08,289 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:20:08,290 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:20:08,293 - root - INFO - Fetching content from URL: https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:20:10,391 - root - INFO - Fetched 9377 characters of text from https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:20:10,395 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:20:10,395 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:20:10,399 - root - INFO - Fetching content from URL: https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 22:20:12,772 - root - INFO - Fetched 14194 characters of text from https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 22:20:12,776 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:20:12,776 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:20:12,779 - root - INFO - Fetching content from URL: https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 22:20:14,988 - root - INFO - Fetched 4968 characters of text from https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 22:20:14,990 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:20:14,991 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:20:14,994 - root - INFO - Fetching content from URL: https://www.kingsleynapley.co.uk/insights/blogs/regulatory-blog/court-of-appeal-ruling-raises-hope-for-clarification-on-cbd-legal-status
+2024-10-15 22:21:24,781 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:21:25,583 - root - INFO - Loaded 18 scraped URLs from scraped_urls.json
+2024-10-15 22:21:25,586 - root - INFO - Starting web scraper
+2024-10-15 22:21:25,598 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:21:25,606 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:21:27,883 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:21:31,423 - root - INFO - Fetched 1 new links from Goddddogle page 1
+2024-10-15 22:21:31,424 - root - INFO - Total new Google search results found: 1
+2024-10-15 22:21:31,429 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:21:42,916 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:21:42,919 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:21:45,386 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:21:45,403 - root - INFO - Paragraph extracted
+2024-10-15 22:21:45,404 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:21:52,359 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:21:52,373 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:21:52,377 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:21:52,380 - root - INFO - Saved 19 scraped URLs to scraped_urls.json
+2024-10-15 22:21:52,396 - root - INFO - Added 0 new rows to search_results.csv
+2024-10-15 22:21:52,397 - root - INFO - Saved 19 scraped URLs to scraped_urls.json
+2024-10-15 22:21:52,398 - root - INFO - Updating scraped counter for row 1 to 1
+2024-10-15 22:21:53,641 - root - INFO - Updated scraped counter for row 1 to 1
+2024-10-15 22:21:53,642 - root - INFO - Processed 2 paragraphs for row 1. Total scraped: 1/5
+2024-10-15 22:21:53,642 - root - INFO - Updating Google Sheets
+2024-10-15 22:21:54,875 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:21:54,878 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 22:21:58,421 - root - INFO - Fetched 7 new links from Goddddogle page 1
+2024-10-15 22:21:58,422 - root - INFO - Total new Google search results found: 7
+2024-10-15 22:21:58,427 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 22:22:01,296 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 22:22:01,301 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:22:03,543 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:22:03,546 - root - INFO - Paragraph extracted
+2024-10-15 22:22:03,547 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:22:06,521 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:22:06,523 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:22:06,525 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:22:06,526 - root - INFO - Saved 20 scraped URLs to scraped_urls.json
+2024-10-15 22:22:06,545 - root - INFO - Added 0 new rows to search_results.csv
+2024-10-15 22:22:06,547 - root - INFO - Saved 20 scraped URLs to scraped_urls.json
+2024-10-15 22:22:06,548 - root - INFO - Updating scraped counter for row 2 to 1
+2024-10-15 22:22:07,534 - root - INFO - Updated scraped counter for row 2 to 1
+2024-10-15 22:22:07,535 - root - INFO - Processed 2 paragraphs for row 2. Total scraped: 1/5
+2024-10-15 22:22:07,535 - root - INFO - Updating Google Sheets
+2024-10-15 22:22:08,540 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:22:08,541 - root - INFO - Fetching content from URL: https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:22:10,929 - root - INFO - Fetched 9377 characters of text from https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:22:10,932 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:22:12,479 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:22:12,482 - root - INFO - Paragraph extracted
+2024-10-15 22:22:12,482 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:22:18,723 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:22:18,726 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:22:18,727 - root - INFO - Checking again with OpenAI
+2024-10-15 22:22:18,728 - root - ERROR - Error calling OpenAI API: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2024-10-15 22:22:18,733 - root - INFO - Fetching content from URL: https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 22:22:20,792 - root - INFO - Fetched 4968 characters of text from https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 22:22:20,796 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:22:23,374 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:22:23,377 - root - INFO - Paragraph extracted
+2024-10-15 22:22:23,378 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:22:29,966 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:22:29,969 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:22:29,973 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:22:29,975 - root - INFO - Saved 21 scraped URLs to scraped_urls.json
+2024-10-15 22:22:30,003 - root - INFO - Added 0 new rows to search_results.csv
+2024-10-15 22:22:30,004 - root - INFO - Saved 21 scraped URLs to scraped_urls.json
+2024-10-15 22:22:30,005 - root - INFO - Updating scraped counter for row 2 to 2
+2024-10-15 22:22:31,174 - root - INFO - Updated scraped counter for row 2 to 2
+2024-10-15 22:22:31,175 - root - INFO - Processed 4 paragraphs for row 2. Total scraped: 2/5
+2024-10-15 22:22:31,176 - root - INFO - Updating Google Sheets
+2024-10-15 22:22:32,220 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:22:32,222 - root - INFO - Fetching content from URL: https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 22:22:34,464 - root - INFO - Fetched 14194 characters of text from https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 22:22:34,468 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:22:37,295 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:22:37,299 - root - INFO - Paragraph extracted
+2024-10-15 22:22:37,300 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:22:41,336 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:22:41,338 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:22:41,340 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:22:41,341 - root - INFO - Saved 22 scraped URLs to scraped_urls.json
+2024-10-15 22:22:41,370 - root - INFO - Added 0 new rows to search_results.csv
+2024-10-15 22:22:41,372 - root - INFO - Saved 22 scraped URLs to scraped_urls.json
+2024-10-15 22:22:41,373 - root - INFO - Updating scraped counter for row 2 to 3
+2024-10-15 22:22:42,420 - root - INFO - Updated scraped counter for row 2 to 3
+2024-10-15 22:22:42,421 - root - INFO - Processed 6 paragraphs for row 2. Total scraped: 3/5
+2024-10-15 22:22:42,421 - root - INFO - Updating Google Sheets
+2024-10-15 22:22:43,391 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:22:43,395 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Pakistan"
+2024-10-15 22:22:47,038 - root - INFO - Fetched 7 new links from Goddddogle page 1
+2024-10-15 22:22:47,039 - root - INFO - Total new Google search results found: 7
+2024-10-15 22:22:47,044 - root - INFO - Fetching content from URL: https://asia.nikkei.com/Politics/Pakistan-sets-cannabis-rules-eyes-sales-to-help-balance-books
+2024-10-15 22:22:50,840 - root - INFO - Fetched 4547 characters of text from https://asia.nikkei.com/Politics/Pakistan-sets-cannabis-rules-eyes-sales-to-help-balance-books
+2024-10-15 22:22:50,844 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:22:52,317 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:22:52,321 - root - INFO - Paragraph extracted
+2024-10-15 22:22:52,322 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:22:55,920 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:22:55,923 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:22:55,927 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:22:55,929 - root - INFO - Saved 23 scraped URLs to scraped_urls.json
+2024-10-15 22:22:55,956 - root - INFO - Added 0 new rows to search_results.csv
+2024-10-15 22:22:55,958 - root - INFO - Saved 23 scraped URLs to scraped_urls.json
+2024-10-15 22:22:55,958 - root - INFO - Updating scraped counter for row 3 to 1
+2024-10-15 22:22:57,008 - root - INFO - Updated scraped counter for row 3 to 1
+2024-10-15 22:22:57,009 - root - INFO - Processed 2 paragraphs for row 3. Total scraped: 1/5
+2024-10-15 22:22:57,009 - root - INFO - Updating Google Sheets
+2024-10-15 22:22:58,040 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:22:58,041 - root - INFO - Fetching content from URL: https://na.gov.pk/uploads/documents/1580444882_360.pdf
+2024-10-15 22:23:06,156 - root - INFO - PDF detected: https://na.gov.pk/uploads/documents/1580444882_360.pdf
+2024-10-15 22:23:06,156 - root - INFO - Extracting text from PDF
+2024-10-15 22:23:07,163 - root - INFO - Extracted 40659 characters from PDF
+2024-10-15 22:23:07,168 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:23:08,785 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:23:08,787 - root - INFO - Paragraph extracted
+2024-10-15 22:23:08,787 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:23:11,040 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:23:11,043 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:23:11,044 - root - INFO - Checking again with Claude
+2024-10-15 22:23:15,452 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:23:15,455 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:23:15,460 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:23:15,462 - root - INFO - Saved 24 scraped URLs to scraped_urls.json
+2024-10-15 22:23:15,464 - root - INFO - Updating scraped counter for row 3 to 2
+2024-10-15 22:23:16,449 - root - INFO - Updated scraped counter for row 3 to 2
+2024-10-15 22:23:16,449 - root - INFO - Processed 3 paragraphs for row 3. Total scraped: 2/5
+2024-10-15 22:23:16,449 - root - INFO - Updating Google Sheets
+2024-10-15 22:23:17,487 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:23:17,488 - root - INFO - Fetching content from URL: https://customnews.pk/2024/01/31/scp-up-hold-shc-judgment-in-cdc-csc-thc-case-filed-by-commissioner-irs-zone-iv/
+2024-10-15 22:23:36,478 - root - INFO - Fetched 18288 characters of text from https://customnews.pk/2024/01/31/scp-up-hold-shc-judgment-in-cdc-csc-thc-case-filed-by-commissioner-irs-zone-iv/
+2024-10-15 22:23:36,481 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:23:37,957 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:23:37,960 - root - INFO - Paragraph extracted
+2024-10-15 22:23:37,961 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:23:40,266 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:23:40,268 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:23:40,270 - root - INFO - Saved 25 scraped URLs to scraped_urls.json
+2024-10-15 22:23:40,271 - root - INFO - No relevant paragraph found for URL: https://customnews.pk/2024/01/31/scp-up-hold-shc-judgment-in-cdc-csc-thc-case-filed-by-commissioner-irs-zone-iv/
+2024-10-15 22:23:40,272 - root - INFO - Fetching content from URL: https://www.na.gov.pk/uploads/documents/1573482018_650.pdf
+2024-10-15 22:23:43,979 - root - INFO - PDF detected: https://www.na.gov.pk/uploads/documents/1573482018_650.pdf
+2024-10-15 22:23:43,980 - root - INFO - Extracting text from PDF
+2024-10-15 22:23:44,173 - root - INFO - Extracted 7668 characters from PDF
+2024-10-15 22:23:44,176 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:23:46,389 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:23:46,392 - root - INFO - Paragraph extracted
+2024-10-15 22:23:46,393 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:23:49,362 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:23:49,364 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:23:49,364 - root - INFO - Checking again with Claude
+2024-10-15 22:23:53,082 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:23:53,085 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:23:53,090 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:23:53,092 - root - INFO - Saved 26 scraped URLs to scraped_urls.json
+2024-10-15 22:23:53,094 - root - INFO - Updating scraped counter for row 3 to 3
+2024-10-15 22:23:53,711 - root - INFO - Updated scraped counter for row 3 to 3
+2024-10-15 22:23:53,712 - root - INFO - Processed 4 paragraphs for row 3. Total scraped: 3/5
+2024-10-15 22:23:53,712 - root - INFO - Updating Google Sheets
+2024-10-15 22:23:54,678 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:23:54,679 - root - INFO - Fetching content from URL: https://ethnobotanyjournal.org/index.php/era/article/download/3799/1491/36127
+2024-10-15 22:24:37,401 - bs4.dammit - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-15 22:24:37,448 - root - INFO - Fetched 1871760 characters of text from https://ethnobotanyjournal.org/index.php/era/article/download/3799/1491/36127
+2024-10-15 22:24:37,452 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:24:39,552 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:24:39,556 - root - INFO - Paragraph extracted
+2024-10-15 22:24:39,556 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 22:24:42,053 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:24:42,055 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:24:42,056 - root - INFO - Checking again with Claude
+2024-10-15 22:24:47,402 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 22:24:47,405 - root - INFO - Paragraph extracted with Claude
+2024-10-15 22:24:47,411 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 22:24:47,413 - root - INFO - Saved 27 scraped URLs to scraped_urls.json
+2024-10-15 22:24:47,415 - root - INFO - Updating scraped counter for row 3 to 4
+2024-10-15 22:24:48,448 - root - INFO - Updated scraped counter for row 3 to 4
+2024-10-15 22:24:48,449 - root - INFO - Processed 5 paragraphs for row 3. Total scraped: 4/5
+2024-10-15 22:24:48,450 - root - INFO - Updating Google Sheets
+2024-10-15 22:24:49,448 - root - INFO - Updated 5 cells in Google Sheets
+2024-10-15 22:24:49,449 - root - INFO - Web scraper finished
+2024-10-15 22:30:22,581 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:32:19,289 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:32:19,915 - root - INFO - Loaded 27 scraped URLs from scraped_urls.json
+2024-10-15 22:32:19,923 - root - INFO - Starting web scraper
+2024-10-15 22:32:19,933 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:32:19,939 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:32:22,351 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:32:25,910 - root - INFO - Fetched 1 new links from Google page 1
+2024-10-15 22:32:25,911 - root - INFO - Total new Google search results found: 1
+2024-10-15 22:32:25,912 - root - INFO - Fetching content from URL: https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 22:32:28,295 - root - INFO - Fetched 9199 characters of text from https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 22:32:28,299 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:32:28,299 - root - ERROR - Error calling OpenAI API: You tried to pass a `BaseModel` class to `chat.completions.create()`; You must use `beta.chat.completions.parse()` instead
+2024-10-15 22:32:28,301 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 22:32:31,786 - root - INFO - Fetched 4 new links from Google page 1
+2024-10-15 22:32:31,787 - root - INFO - Total new Google search results found: 4
+2024-10-15 22:32:31,788 - root - INFO - Fetching content from URL: https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:32:34,717 - root - INFO - Fetched 9377 characters of text from https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 22:32:34,721 - root - INFO - Extracting relevant paragraph with OpenAI
+2024-10-15 22:32:34,721 - root - ERROR - Error calling OpenAI API: You tried to pass a `BaseModel` class to `chat.completions.create()`; You must use `beta.chat.completions.parse()` instead
+2024-10-15 22:32:34,722 - root - INFO - Fetching content from URL: https://www.kingsleynapley.co.uk/insights/blogs/regulatory-blog/court-of-appeal-ruling-raises-hope-for-clarification-on-cbd-legal-status
+2024-10-15 22:35:39,935 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:35:40,550 - root - INFO - Loaded 0 scraped URLs from scraped_urls.json
+2024-10-15 22:35:40,558 - root - INFO - Starting web scraper
+2024-10-15 22:35:40,570 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:35:40,576 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:35:43,000 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:35:46,521 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 22:35:46,523 - root - INFO - Total new Google search results found: 10
+2024-10-15 22:35:46,524 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:35:48,818 - root - INFO - Fetched 29909 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:35:48,821 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:35:48,821 - root - ERROR - Error calling OpenAI API: 'Completions' object has no attribute 'create'
+2024-10-15 22:35:48,822 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:35:59,598 - root - INFO - Fetched 2774 characters of text from https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:35:59,602 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:35:59,603 - root - ERROR - Error calling OpenAI API: 'Completions' object has no attribute 'create'
+2024-10-15 22:35:59,603 - root - INFO - Fetching content from URL: https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 22:36:02,058 - root - ERROR - Request error while fetching https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext: 520 Server Error:  for url: https://api.zyte.com/v1/extract
+2024-10-15 22:36:02,064 - root - INFO - Fetching content from URL: https://www.osborneclarke.com/insights/will-cannabis-now-be-legal-germany-german-parliament-passes-new-cannabis-act
+2024-10-15 22:36:04,923 - root - INFO - Fetched 17419 characters of text from https://www.osborneclarke.com/insights/will-cannabis-now-be-legal-germany-german-parliament-passes-new-cannabis-act
+2024-10-15 22:36:04,926 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:36:04,927 - root - ERROR - Error calling OpenAI API: 'Completions' object has no attribute 'create'
+2024-10-15 22:36:04,928 - root - INFO - Fetching content from URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 22:36:07,078 - root - INFO - Fetched 13749 characters of text from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 22:36:07,081 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:36:07,082 - root - ERROR - Error calling OpenAI API: 'Completions' object has no attribute 'create'
+2024-10-15 22:36:07,083 - root - INFO - Fetching content from URL: https://www.dw.com/en/germany-cannabis-limit-set-for-drivers/a-69295847
+2024-10-15 22:36:09,724 - root - INFO - Fetched 3350 characters of text from https://www.dw.com/en/germany-cannabis-limit-set-for-drivers/a-69295847
+2024-10-15 22:36:09,727 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:36:09,728 - root - ERROR - Error calling OpenAI API: 'Completions' object has no attribute 'create'
+2024-10-15 22:36:09,729 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:37:31,140 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:37:31,748 - root - INFO - Loaded 0 scraped URLs from scraped_urls.json
+2024-10-15 22:37:31,756 - root - INFO - Starting web scraper
+2024-10-15 22:37:31,767 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:37:31,773 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:37:33,942 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:37:37,488 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 22:37:37,489 - root - INFO - Total new Google search results found: 10
+2024-10-15 22:37:37,490 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:37:39,714 - root - INFO - Fetched 29909 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:37:39,718 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:37:40,447 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2024-10-15 22:37:40,450 - root - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "Invalid schema for response_format 'ParagraphResponse': In context=('properties', 'date'), 'format' is not permitted.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2024-10-15 22:37:40,452 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:37:50,644 - root - INFO - Fetched 2774 characters of text from https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:37:50,647 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:37:51,066 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2024-10-15 22:37:51,068 - root - ERROR - Error calling OpenAI API: Error code: 400 - {'error': {'message': "Invalid schema for response_format 'ParagraphResponse': In context=('properties', 'date'), 'format' is not permitted.", 'type': 'invalid_request_error', 'param': 'response_format', 'code': None}}
+2024-10-15 22:37:51,071 - root - INFO - Fetching content from URL: https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 22:38:21,872 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:38:22,489 - root - INFO - Loaded 0 scraped URLs from scraped_urls.json
+2024-10-15 22:38:22,495 - root - INFO - Starting web scraper
+2024-10-15 22:38:22,505 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:38:22,512 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:38:24,661 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:38:28,277 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 22:38:28,279 - root - INFO - Total new Google search results found: 10
+2024-10-15 22:38:28,279 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:38:30,717 - root - INFO - Fetched 29909 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:38:30,721 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:38:46,377 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:38:46,434 - root - INFO - Fetching content from URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 22:38:49,046 - root - INFO - Fetched 13749 characters of text from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 22:38:49,050 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:38:52,429 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:38:52,439 - root - INFO - Fetching content from URL: https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 22:38:56,821 - root - INFO - Fetched 49216 characters of text from https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 22:38:56,824 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:39:02,940 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:39:02,946 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:39:15,966 - root - INFO - Fetched 2774 characters of text from https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:39:15,969 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:39:18,768 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:39:18,781 - root - INFO - Fetching content from URL: https://www.osborneclarke.com/insights/will-cannabis-now-be-legal-germany-german-parliament-passes-new-cannabis-act
+2024-10-15 22:39:21,649 - root - INFO - Fetched 17419 characters of text from https://www.osborneclarke.com/insights/will-cannabis-now-be-legal-germany-german-parliament-passes-new-cannabis-act
+2024-10-15 22:39:21,653 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:39:24,415 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:39:24,424 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 22:44:33,883 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:44:34,503 - root - INFO - Loaded 0 scraped URLs from scraped_urls.json
+2024-10-15 22:44:34,509 - root - INFO - Starting web scraper
+2024-10-15 22:44:34,520 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:44:34,527 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:44:36,913 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:44:40,419 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 22:44:40,420 - root - INFO - Total new Google search results found: 10
+2024-10-15 22:44:40,421 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:44:42,605 - root - INFO - Fetched 29909 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:44:42,608 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:44:45,796 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:44:45,845 - root - INFO - Fetching content from URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 22:44:47,857 - root - INFO - Fetched 13749 characters of text from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 22:44:47,860 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:44:51,273 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:44:51,288 - root - INFO - Fetching content from URL: https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 22:44:56,577 - root - INFO - Fetched 49216 characters of text from https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 22:44:56,580 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:44:59,806 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:44:59,820 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 22:47:47,888 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 22:47:48,503 - root - INFO - Loaded 0 scraped URLs from scraped_urls.json
+2024-10-15 22:47:48,509 - root - INFO - Starting web scraper
+2024-10-15 22:47:48,520 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 22:47:48,527 - root - INFO - Successfully created Google Sheets service
+2024-10-15 22:47:51,183 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 22:47:54,746 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 22:47:54,747 - root - INFO - Total new Google search results found: 10
+2024-10-15 22:47:54,748 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:47:56,974 - root - INFO - Fetched 29909 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 22:47:56,977 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 22:48:00,124 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 22:48:00,165 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 23:13:33,665 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 23:13:34,269 - root - INFO - Loaded 0 scraped URLs from scraped_urls.json
+2024-10-15 23:13:34,275 - root - INFO - Starting web scraper
+2024-10-15 23:13:34,285 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 23:13:34,292 - root - INFO - Successfully created Google Sheets service
+2024-10-15 23:13:36,898 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 23:13:40,473 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 23:13:40,474 - root - INFO - Total new Google search results found: 10
+2024-10-15 23:13:40,475 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 23:13:42,759 - root - INFO - Fetched 29909 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_Germany
+2024-10-15 23:13:42,763 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:13:45,199 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:13:45,245 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:13:49,893 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:13:49,920 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:13:49,924 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:13:49,925 - root - INFO - Updating Google Sheets
+2024-10-15 23:13:52,320 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:13:52,321 - root - INFO - Saved 1 scraped URLs to scraped_urls.json
+2024-10-15 23:13:52,322 - root - INFO - Updating scraped counter for row 1 to 4
+2024-10-15 23:13:53,314 - root - INFO - Updated scraped counter for row 1 to 4
+2024-10-15 23:13:53,314 - root - INFO - Processed 1 paragraphs for row 1. Total scraped: 4/5
+2024-10-15 23:13:53,315 - root - INFO - Fetching content from URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 23:13:57,902 - root - INFO - Fetched 13749 characters of text from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9672943/
+2024-10-15 23:13:57,905 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:14:01,847 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:14:01,852 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:14:05,400 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:14:05,402 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:14:05,404 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:14:05,405 - root - INFO - Updating Google Sheets
+2024-10-15 23:14:06,722 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:14:06,723 - root - INFO - Saved 2 scraped URLs to scraped_urls.json
+2024-10-15 23:14:06,724 - root - INFO - Updating scraped counter for row 1 to 5
+2024-10-15 23:14:07,702 - root - INFO - Updated scraped counter for row 1 to 5
+2024-10-15 23:14:08,673 - root - INFO - Marked row 1 as fully scraped in Google Sheets
+2024-10-15 23:14:08,674 - root - INFO - Processed 2 paragraphs for row 1. Total scraped: 5/5
+2024-10-15 23:14:08,677 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 23:14:12,169 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 23:14:12,170 - root - INFO - Total new Google search results found: 10
+2024-10-15 23:14:12,171 - root - INFO - Fetching content from URL: https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 23:14:14,561 - root - INFO - Fetched 48880 characters of text from https://en.wikipedia.org/wiki/Cannabis_in_the_United_Kingdom
+2024-10-15 23:14:14,565 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:14:17,812 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:14:17,820 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:14:22,349 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:14:22,352 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:14:22,356 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:14:22,357 - root - INFO - Updating Google Sheets
+2024-10-15 23:14:23,352 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:14:23,353 - root - INFO - Saved 3 scraped URLs to scraped_urls.json
+2024-10-15 23:14:23,354 - root - INFO - Updating scraped counter for row 2 to 5
+2024-10-15 23:14:23,873 - root - INFO - Updated scraped counter for row 2 to 5
+2024-10-15 23:14:24,815 - root - INFO - Marked row 2 as fully scraped in Google Sheets
+2024-10-15 23:14:24,816 - root - INFO - Processed 1 paragraphs for row 2. Total scraped: 5/5
+2024-10-15 23:14:24,819 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Pakistan"
+2024-10-15 23:14:28,265 - root - INFO - Fetched 10 new links from Google page 1
+2024-10-15 23:14:28,267 - root - INFO - Total new Google search results found: 10
+2024-10-15 23:14:28,267 - root - INFO - Fetching content from URL: https://www.aljazeera.com/news/2024/5/8/pakistan-bets-on-a-cannabis-high-as-its-economy-struggles
+2024-10-15 23:14:30,640 - root - INFO - Fetched 13563 characters of text from https://www.aljazeera.com/news/2024/5/8/pakistan-bets-on-a-cannabis-high-as-its-economy-struggles
+2024-10-15 23:14:30,643 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:14:33,879 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:14:33,886 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:14:37,977 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:14:37,980 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:14:37,984 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:14:37,985 - root - INFO - Updating Google Sheets
+2024-10-15 23:14:38,992 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:14:38,994 - root - INFO - Saved 4 scraped URLs to scraped_urls.json
+2024-10-15 23:14:38,994 - root - INFO - Updating scraped counter for row 3 to 1
+2024-10-15 23:14:39,959 - root - INFO - Updated scraped counter for row 3 to 1
+2024-10-15 23:14:39,960 - root - INFO - Processed 1 paragraphs for row 3. Total scraped: 1/5
+2024-10-15 23:14:39,961 - root - INFO - Fetching content from URL: http://www.pcp.gov.pk/SiteImage/Downloads/7092(24)Ex%20Gaz-I%20Law%20and%20Justice.pdf
+2024-10-15 23:14:44,453 - root - INFO - PDF detected: http://www.pcp.gov.pk/SiteImage/Downloads/7092(24)Ex%20Gaz-I%20Law%20and%20Justice.pdf
+2024-10-15 23:14:44,454 - root - INFO - Extracting text from PDF
+2024-10-15 23:14:45,720 - root - INFO - Extracted 48639 characters from PDF
+2024-10-15 23:14:45,723 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:14:48,151 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:14:48,158 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:14:50,336 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:14:50,339 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:14:50,340 - root - INFO - Checking again with Claude
+2024-10-15 23:14:53,961 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:14:53,964 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:14:53,972 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:14:53,973 - root - INFO - Updating Google Sheets
+2024-10-15 23:14:55,016 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:14:55,018 - root - INFO - Saved 5 scraped URLs to scraped_urls.json
+2024-10-15 23:14:55,018 - root - INFO - Updating scraped counter for row 3 to 2
+2024-10-15 23:14:56,016 - root - INFO - Updated scraped counter for row 3 to 2
+2024-10-15 23:14:56,017 - root - INFO - Processed 2 paragraphs for row 3. Total scraped: 2/5
+2024-10-15 23:14:56,018 - root - INFO - Fetching content from URL: https://www.brecorder.com/news/40286080
+2024-10-15 23:14:58,756 - root - INFO - Fetched 13996 characters of text from https://www.brecorder.com/news/40286080
+2024-10-15 23:14:58,760 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:15:03,046 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:15:03,053 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:15:05,424 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:15:05,426 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:15:05,426 - root - INFO - Checking again with Claude
+2024-10-15 23:15:09,086 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:15:09,089 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:15:09,095 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:15:09,096 - root - INFO - Updating Google Sheets
+2024-10-15 23:15:10,138 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:15:10,140 - root - INFO - Saved 6 scraped URLs to scraped_urls.json
+2024-10-15 23:15:10,141 - root - INFO - Updating scraped counter for row 3 to 3
+2024-10-15 23:15:11,166 - root - INFO - Updated scraped counter for row 3 to 3
+2024-10-15 23:15:11,167 - root - INFO - Processed 3 paragraphs for row 3. Total scraped: 3/5
+2024-10-15 23:15:11,168 - root - INFO - Fetching content from URL: https://asia.nikkei.com/Politics/Pakistan-sets-cannabis-rules-eyes-sales-to-help-balance-books
+2024-10-15 23:15:15,344 - root - INFO - Fetched 4547 characters of text from https://asia.nikkei.com/Politics/Pakistan-sets-cannabis-rules-eyes-sales-to-help-balance-books
+2024-10-15 23:15:15,347 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:15:17,571 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:15:17,578 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:15:19,833 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:15:19,836 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:15:19,839 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:15:19,841 - root - INFO - Updating Google Sheets
+2024-10-15 23:15:20,871 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:15:20,873 - root - INFO - Saved 7 scraped URLs to scraped_urls.json
+2024-10-15 23:15:20,874 - root - INFO - Updating scraped counter for row 3 to 4
+2024-10-15 23:15:21,853 - root - INFO - Updated scraped counter for row 3 to 4
+2024-10-15 23:15:21,854 - root - INFO - Processed 4 paragraphs for row 3. Total scraped: 4/5
+2024-10-15 23:15:21,855 - root - INFO - Fetching content from URL: https://www.quora.com/What-is-the-legal-status-of-cannabis-in-Pakistan
+2024-10-15 23:15:25,887 - root - INFO - Fetched 176 characters of text from https://www.quora.com/What-is-the-legal-status-of-cannabis-in-Pakistan
+2024-10-15 23:15:25,892 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:15:27,771 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:15:27,778 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:15:29,156 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:15:29,157 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:15:29,158 - root - INFO - Checking again with Claude
+2024-10-15 23:15:32,089 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:15:32,091 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:15:32,093 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:15:32,094 - root - INFO - Updating Google Sheets
+2024-10-15 23:15:33,123 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:15:33,124 - root - INFO - Saved 8 scraped URLs to scraped_urls.json
+2024-10-15 23:15:33,125 - root - INFO - Updating scraped counter for row 3 to 5
+2024-10-15 23:15:34,130 - root - INFO - Updated scraped counter for row 3 to 5
+2024-10-15 23:15:35,149 - root - INFO - Marked row 3 as fully scraped in Google Sheets
+2024-10-15 23:15:35,150 - root - INFO - Processed 5 paragraphs for row 3. Total scraped: 5/5
+2024-10-15 23:15:35,150 - root - INFO - Web scraper finished
+2024-10-15 23:37:35,305 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 23:37:35,905 - root - INFO - Loaded 8 scraped URLs from scraped_urls.json
+2024-10-15 23:37:35,911 - root - INFO - Starting web scraper
+2024-10-15 23:37:37,198 - root - INFO - Successfully refreshed the token
+2024-10-15 23:37:37,201 - root - INFO - Saved new token.json file
+2024-10-15 23:37:37,215 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 23:37:37,228 - root - INFO - Successfully created Google Sheets service
+2024-10-15 23:37:39,816 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 23:37:43,365 - root - INFO - Fetched 8 new links from Google page 1
+2024-10-15 23:37:43,366 - root - INFO - Total new Google search results found: 8
+2024-10-15 23:37:43,367 - root - INFO - Fetching content from URL: https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 23:37:46,153 - root - ERROR - Request error while fetching https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext: 520 Server Error:  for url: https://api.zyte.com/v1/extract
+2024-10-15 23:37:46,158 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 23:37:55,519 - root - INFO - Fetched 2774 characters of text from https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 23:37:55,522 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:37:58,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:37:58,306 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:38:01,320 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:38:01,329 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:38:01,330 - root - INFO - Checking again with Claude
+2024-10-15 23:38:03,232 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:38:03,234 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:38:03,235 - root - INFO - Fetching content from URL: https://www.osborneclarke.com/insights/will-cannabis-now-be-legal-germany-german-parliament-passes-new-cannabis-act
+2024-10-15 23:38:05,557 - root - INFO - Fetched 17419 characters of text from https://www.osborneclarke.com/insights/will-cannabis-now-be-legal-germany-german-parliament-passes-new-cannabis-act
+2024-10-15 23:38:05,561 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:38:08,552 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:38:08,559 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:38:11,151 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:38:11,153 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:38:11,153 - root - INFO - Checking again with Claude
+2024-10-15 23:38:16,413 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:38:16,416 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:38:16,420 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:38:16,421 - root - INFO - Updating Google Sheets
+2024-10-15 23:38:17,522 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:38:17,524 - root - INFO - Saved 9 scraped URLs to scraped_urls.json
+2024-10-15 23:38:17,525 - root - INFO - Updating scraped counter for row 1 to 1
+2024-10-15 23:38:18,080 - root - INFO - Updated scraped counter for row 1 to 1
+2024-10-15 23:38:18,080 - root - INFO - Processed 1 paragraphs for row 1. Total scraped: 1/5
+2024-10-15 23:38:18,081 - root - INFO - Fetching content from URL: https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 23:38:29,888 - root - INFO - Fetched 8192 characters of text from https://www.fieldfisher.com/en/insights/germany-legalization-of-cannabis-commerce-these-ar
+2024-10-15 23:38:29,891 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:38:33,554 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:38:33,561 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:38:35,417 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:38:35,420 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:38:35,421 - root - INFO - Checking again with Claude
+2024-10-15 23:38:40,741 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:38:40,744 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:38:40,748 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:38:40,749 - root - INFO - Updating Google Sheets
+2024-10-15 23:38:41,790 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:38:41,791 - root - INFO - Saved 10 scraped URLs to scraped_urls.json
+2024-10-15 23:38:41,792 - root - INFO - Updating scraped counter for row 1 to 2
+2024-10-15 23:38:42,812 - root - INFO - Updated scraped counter for row 1 to 2
+2024-10-15 23:38:42,813 - root - INFO - Processed 2 paragraphs for row 1. Total scraped: 2/5
+2024-10-15 23:38:42,813 - root - INFO - Fetching content from URL: https://practiceguides.chambers.com/practice-guides/medical-cannabis-cannabinoid-regulation-2024/germany/trends-and-developments/O17058
+2024-10-15 23:38:45,411 - root - INFO - Fetched 59395 characters of text from https://practiceguides.chambers.com/practice-guides/medical-cannabis-cannabinoid-regulation-2024/germany/trends-and-developments/O17058
+2024-10-15 23:38:45,415 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:38:49,150 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:38:49,158 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:55:50,383 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-15 23:55:50,999 - root - INFO - Loaded 10 scraped URLs from scraped_urls.json
+2024-10-15 23:55:51,005 - root - INFO - Starting web scraper
+2024-10-15 23:55:51,023 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-15 23:55:51,031 - root - INFO - Successfully created Google Sheets service
+2024-10-15 23:55:53,392 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-15 23:55:56,916 - root - INFO - Fetched 6 new links from Google page 1
+2024-10-15 23:55:56,917 - root - INFO - Total new Google search results found: 6
+2024-10-15 23:55:56,917 - root - INFO - Fetching content from URL: https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 23:56:07,369 - root - INFO - Fetched 49216 characters of text from https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(24)00096-6/fulltext
+2024-10-15 23:56:07,372 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:56:10,733 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:56:10,779 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:56:12,794 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:56:12,802 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:56:12,803 - root - INFO - Checking again with Claude
+2024-10-15 23:56:18,809 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:56:18,811 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:56:18,813 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:56:18,814 - root - INFO - Updating Google Sheets
+2024-10-15 23:56:19,418 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:56:19,420 - root - INFO - Saved 11 scraped URLs to scraped_urls.json
+2024-10-15 23:56:19,420 - root - INFO - Processed 1 paragraphs for row 1. Total scraped: 1/5
+2024-10-15 23:56:19,421 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 23:56:31,998 - root - INFO - Fetched 2774 characters of text from https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-15 23:56:32,002 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:56:36,622 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:56:36,627 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:56:38,342 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:56:38,344 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:56:38,344 - root - INFO - Checking again with Claude
+2024-10-15 23:56:40,534 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:56:40,537 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:56:40,539 - root - INFO - Fetching content from URL: https://www.dw.com/en/germany-cannabis-limit-set-for-drivers/a-69295847
+2024-10-15 23:56:43,340 - root - INFO - Fetched 3350 characters of text from https://www.dw.com/en/germany-cannabis-limit-set-for-drivers/a-69295847
+2024-10-15 23:56:43,343 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:56:45,792 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:56:45,799 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:56:48,363 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:56:48,366 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:56:48,367 - root - INFO - Checking again with Claude
+2024-10-15 23:56:51,778 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:56:51,784 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:56:51,789 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:56:51,790 - root - INFO - Updating Google Sheets
+2024-10-15 23:56:52,869 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:56:52,871 - root - INFO - Saved 12 scraped URLs to scraped_urls.json
+2024-10-15 23:56:52,871 - root - INFO - Processed 2 paragraphs for row 1. Total scraped: 2/5
+2024-10-15 23:56:52,872 - root - INFO - Fetching content from URL: https://practiceguides.chambers.com/practice-guides/medical-cannabis-cannabinoid-regulation-2024/germany/trends-and-developments/O17058
+2024-10-15 23:56:56,022 - root - INFO - Fetched 59395 characters of text from https://practiceguides.chambers.com/practice-guides/medical-cannabis-cannabinoid-regulation-2024/germany/trends-and-developments/O17058
+2024-10-15 23:56:56,025 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:57:00,305 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:57:00,313 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:57:02,658 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:02,663 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:02,664 - root - INFO - Checking again with Claude
+2024-10-15 23:57:07,354 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:07,357 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:07,362 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:57:07,363 - root - INFO - Updating Google Sheets
+2024-10-15 23:57:08,404 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:57:08,405 - root - INFO - Saved 13 scraped URLs to scraped_urls.json
+2024-10-15 23:57:08,406 - root - INFO - Processed 3 paragraphs for row 1. Total scraped: 3/5
+2024-10-15 23:57:08,406 - root - INFO - Fetching content from URL: https://www.goodwinlaw.com/en/insights/publications/2024/03/alerts-practices-can-germany-legalizes-adult-use-cannabis
+2024-10-15 23:57:10,830 - root - INFO - Fetched 10470 characters of text from https://www.goodwinlaw.com/en/insights/publications/2024/03/alerts-practices-can-germany-legalizes-adult-use-cannabis
+2024-10-15 23:57:10,834 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:57:14,610 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:57:14,614 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:57:16,324 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:16,327 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:16,328 - root - INFO - Checking again with Claude
+2024-10-15 23:57:21,629 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:21,631 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:21,634 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:57:21,634 - root - INFO - Updating Google Sheets
+2024-10-15 23:57:22,191 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:57:22,192 - root - INFO - Saved 14 scraped URLs to scraped_urls.json
+2024-10-15 23:57:22,193 - root - INFO - Processed 4 paragraphs for row 1. Total scraped: 4/5
+2024-10-15 23:57:22,193 - root - INFO - Fetching content from URL: https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 23:57:24,552 - root - INFO - Fetched 9199 characters of text from https://mjbizdaily.com/germany-imports-record-amount-of-cannabis-but-growth-slows/
+2024-10-15 23:57:24,555 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:57:27,321 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:57:27,328 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:57:29,030 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:29,032 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:29,032 - root - INFO - Checking again with Claude
+2024-10-15 23:57:32,578 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:32,581 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:32,585 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:57:32,586 - root - INFO - Updating Google Sheets
+2024-10-15 23:57:33,889 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:57:33,891 - root - INFO - Saved 15 scraped URLs to scraped_urls.json
+2024-10-15 23:57:34,772 - root - INFO - Marked row 1 as fully scraped in Google Sheets
+2024-10-15 23:57:34,773 - root - INFO - Processed 5 paragraphs for row 1. Total scraped: 5/5
+2024-10-15 23:57:34,774 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-15 23:57:38,331 - root - INFO - Fetched 9 new links from Google page 1
+2024-10-15 23:57:38,333 - root - INFO - Total new Google search results found: 9
+2024-10-15 23:57:38,333 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 23:57:41,368 - root - INFO - Fetched 184 characters of text from https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-15 23:57:41,373 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:57:43,995 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:57:44,003 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:57:45,553 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:45,556 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:45,557 - root - INFO - Checking again with Claude
+2024-10-15 23:57:46,917 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:46,919 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:46,920 - root - INFO - Fetching content from URL: https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 23:57:49,601 - root - INFO - Fetched 9377 characters of text from https://iea.org.uk/media/uks-illicit-cannabis-market-worth-2-5bn-a-year-finds-new-report/
+2024-10-15 23:57:49,604 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:57:54,763 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:57:54,768 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:57:58,321 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:57:58,323 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:57:58,326 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:57:58,327 - root - INFO - Updating Google Sheets
+2024-10-15 23:57:58,898 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:57:58,899 - root - INFO - Saved 16 scraped URLs to scraped_urls.json
+2024-10-15 23:57:58,900 - root - INFO - Processed 1 paragraphs for row 2. Total scraped: 1/5
+2024-10-15 23:57:58,900 - root - INFO - Fetching content from URL: https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 23:58:00,819 - root - INFO - Fetched 4968 characters of text from https://www.keithborer.co.uk/news/navigating-low-thc-cannabis-regulation-a-post-brexit-perspective-for-legal-practitioners-in-the-uk/
+2024-10-15 23:58:00,823 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:58:03,944 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:58:03,948 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:58:07,955 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:58:07,958 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:58:07,963 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:58:07,964 - root - INFO - Updating Google Sheets
+2024-10-15 23:58:08,521 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:58:08,523 - root - INFO - Saved 17 scraped URLs to scraped_urls.json
+2024-10-15 23:58:08,524 - root - INFO - Processed 2 paragraphs for row 2. Total scraped: 2/5
+2024-10-15 23:58:08,525 - root - INFO - Fetching content from URL: https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 23:58:12,755 - root - INFO - Fetched 14194 characters of text from https://releaf.co.uk/research/statistic-series-is-uk-medical-cannabis-a-cash-crop
+2024-10-15 23:58:12,759 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:58:19,304 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:58:19,312 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:58:23,290 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:58:23,292 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:58:23,295 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:58:23,296 - root - INFO - Updating Google Sheets
+2024-10-15 23:58:24,325 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:58:24,327 - root - INFO - Saved 18 scraped URLs to scraped_urls.json
+2024-10-15 23:58:24,328 - root - INFO - Processed 3 paragraphs for row 2. Total scraped: 3/5
+2024-10-15 23:58:24,328 - root - INFO - Fetching content from URL: https://www.bbc.com/news/world-europe-jersey-66055356
+2024-10-15 23:58:26,788 - root - INFO - Fetched 4449 characters of text from https://www.bbc.com/news/world-europe-jersey-66055356
+2024-10-15 23:58:26,792 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:58:30,066 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:58:30,070 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:58:33,450 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:58:33,453 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:58:33,458 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:58:33,459 - root - INFO - Updating Google Sheets
+2024-10-15 23:58:34,474 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:58:34,476 - root - INFO - Saved 19 scraped URLs to scraped_urls.json
+2024-10-15 23:58:34,477 - root - INFO - Processed 4 paragraphs for row 2. Total scraped: 4/5
+2024-10-15 23:58:34,477 - root - INFO - Fetching content from URL: https://gmtrends.mmu.ac.uk/wp-content/uploads/sites/425/2024/10/GM-TRENDS-2023-24-THC-Vapes.pdf
+2024-10-15 23:58:38,144 - root - INFO - PDF detected: https://gmtrends.mmu.ac.uk/wp-content/uploads/sites/425/2024/10/GM-TRENDS-2023-24-THC-Vapes.pdf
+2024-10-15 23:58:38,144 - root - INFO - Extracting text from PDF
+2024-10-15 23:58:39,591 - root - INFO - Extracted 82633 characters from PDF
+2024-10-15 23:58:39,595 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:58:44,140 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:58:44,146 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:58:45,955 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:58:45,957 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:58:45,957 - root - INFO - Checking again with Claude
+2024-10-15 23:58:50,358 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:58:50,361 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:58:50,366 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:58:50,367 - root - INFO - Updating Google Sheets
+2024-10-15 23:58:50,934 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:58:50,936 - root - INFO - Saved 20 scraped URLs to scraped_urls.json
+2024-10-15 23:58:51,315 - root - INFO - Marked row 2 as fully scraped in Google Sheets
+2024-10-15 23:58:51,316 - root - INFO - Processed 5 paragraphs for row 2. Total scraped: 5/5
+2024-10-15 23:58:51,318 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Pakistan"
+2024-10-15 23:58:54,782 - root - INFO - Fetched 5 new links from Google page 1
+2024-10-15 23:58:54,783 - root - INFO - Total new Google search results found: 5
+2024-10-15 23:58:54,784 - root - INFO - Fetching content from URL: https://customnews.pk/2024/01/31/scp-up-hold-shc-judgment-in-cdc-csc-thc-case-filed-by-commissioner-irs-zone-iv/
+2024-10-15 23:59:13,675 - root - INFO - Fetched 18309 characters of text from https://customnews.pk/2024/01/31/scp-up-hold-shc-judgment-in-cdc-csc-thc-case-filed-by-commissioner-irs-zone-iv/
+2024-10-15 23:59:13,678 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:59:17,431 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:59:17,438 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:59:19,125 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:59:19,129 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:59:19,130 - root - INFO - Checking again with Claude
+2024-10-15 23:59:24,276 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:59:24,279 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:59:24,285 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:59:24,286 - root - INFO - Updating Google Sheets
+2024-10-15 23:59:25,448 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:59:25,450 - root - INFO - Saved 21 scraped URLs to scraped_urls.json
+2024-10-15 23:59:25,451 - root - INFO - Processed 1 paragraphs for row 3. Total scraped: 1/5
+2024-10-15 23:59:25,451 - root - INFO - Fetching content from URL: https://na.gov.pk/uploads/documents/1580444882_360.pdf
+2024-10-15 23:59:32,790 - root - INFO - PDF detected: https://na.gov.pk/uploads/documents/1580444882_360.pdf
+2024-10-15 23:59:32,790 - root - INFO - Extracting text from PDF
+2024-10-15 23:59:33,689 - root - INFO - Extracted 40659 characters from PDF
+2024-10-15 23:59:33,693 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:59:36,817 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:59:36,821 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:59:38,585 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:59:38,587 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:59:38,588 - root - INFO - Checking again with Claude
+2024-10-15 23:59:41,817 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:59:41,820 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:59:41,825 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-15 23:59:41,826 - root - INFO - Updating Google Sheets
+2024-10-15 23:59:42,402 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-15 23:59:42,403 - root - INFO - Saved 22 scraped URLs to scraped_urls.json
+2024-10-15 23:59:42,404 - root - INFO - Processed 2 paragraphs for row 3. Total scraped: 2/5
+2024-10-15 23:59:42,405 - root - INFO - Fetching content from URL: https://www.na.gov.pk/uploads/documents/1573482018_650.pdf
+2024-10-15 23:59:45,844 - root - INFO - PDF detected: https://www.na.gov.pk/uploads/documents/1573482018_650.pdf
+2024-10-15 23:59:45,845 - root - INFO - Extracting text from PDF
+2024-10-15 23:59:46,059 - root - INFO - Extracted 7668 characters from PDF
+2024-10-15 23:59:46,062 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-15 23:59:50,662 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-15 23:59:50,670 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-15 23:59:52,392 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:59:52,395 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:59:52,396 - root - INFO - Checking again with Claude
+2024-10-15 23:59:54,052 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-15 23:59:54,054 - root - INFO - Paragraph extracted with Claude
+2024-10-15 23:59:54,055 - root - INFO - Fetching content from URL: https://www.himalayanhemp.in/post/pakistan-approves-license-for-industrial-and-medical-use-of-cannabis
+2024-10-15 23:59:58,785 - root - INFO - Fetched 11810 characters of text from https://www.himalayanhemp.in/post/pakistan-approves-license-for-industrial-and-medical-use-of-cannabis
+2024-10-15 23:59:58,789 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:00:01,451 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:00:01,458 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:00:04,972 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:00:04,975 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:00:04,981 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:00:04,983 - root - INFO - Updating Google Sheets
+2024-10-16 00:00:05,569 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:00:05,570 - root - INFO - Saved 23 scraped URLs to scraped_urls.json
+2024-10-16 00:00:05,571 - root - INFO - Processed 3 paragraphs for row 3. Total scraped: 3/5
+2024-10-16 00:00:05,572 - root - INFO - Fetching content from URL: https://download1.fbr.gov.pk/Docs/2020731075425133GazetteofTheFinanceAct2020.pdf
+2024-10-16 00:00:19,125 - root - INFO - PDF detected: https://download1.fbr.gov.pk/Docs/2020731075425133GazetteofTheFinanceAct2020.pdf
+2024-10-16 00:00:19,125 - root - INFO - Extracting text from PDF
+2024-10-16 00:00:24,492 - root - INFO - Extracted 238319 characters from PDF
+2024-10-16 00:00:24,497 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:00:28,203 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:00:28,206 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:00:29,818 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:00:29,821 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:00:29,822 - root - INFO - Checking again with Claude
+2024-10-16 00:00:32,405 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:00:32,406 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:00:32,409 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:00:32,410 - root - INFO - Updating Google Sheets
+2024-10-16 00:00:33,474 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:00:33,476 - root - INFO - Saved 24 scraped URLs to scraped_urls.json
+2024-10-16 00:00:33,477 - root - INFO - Processed 4 paragraphs for row 3. Total scraped: 4/5
+2024-10-16 00:00:33,477 - root - INFO - Web scraper finished
+2024-10-16 00:33:06,329 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-16 00:33:06,951 - root - INFO - Loaded 24 scraped URLs from scraped_urls.json
+2024-10-16 00:33:06,957 - root - INFO - Starting web scraper
+2024-10-16 00:33:06,968 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-16 00:33:06,975 - root - INFO - Successfully created Google Sheets service
+2024-10-16 00:33:08,891 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-16 00:33:12,423 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-16 00:33:12,424 - root - INFO - Total new Google search results found: 2
+2024-10-16 00:33:12,425 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-16 00:33:29,358 - root - INFO - Log file is being written to: c:\Users\NeXbit\Desktop\article-searching\logs\scraper.log
+2024-10-16 00:33:29,985 - root - INFO - Loaded 24 scraped URLs from scraped_urls.json
+2024-10-16 00:33:29,992 - root - INFO - Starting web scraper
+2024-10-16 00:33:30,002 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-10-16 00:33:30,009 - root - INFO - Successfully created Google Sheets service
+2024-10-16 00:33:32,150 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Germany"
+2024-10-16 00:33:35,687 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-16 00:33:35,688 - root - INFO - Total new Google search results found: 2
+2024-10-16 00:33:35,689 - root - INFO - Fetching content from URL: https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-16 00:33:45,468 - root - INFO - Fetched 2774 characters of text from https://www.reddit.com/r/germany/comments/1ay36b5/legalised_cannabis/
+2024-10-16 00:33:45,471 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:33:48,778 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:33:48,828 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:33:51,622 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:33:51,627 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:33:51,627 - root - INFO - Checking again with Claude
+2024-10-16 00:33:53,542 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:33:53,545 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:33:53,546 - root - INFO - Fetching content from URL: https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-16 00:33:55,848 - root - INFO - Fetched 16132 characters of text from https://www.euronews.com/health/2023/08/18/germany-is-set-to-make-cannabis-legal-where-does-the-rest-of-europe-stand-on-marijuana-use
+2024-10-16 00:33:55,852 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:33:59,467 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:33:59,474 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:34:01,330 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:01,333 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:01,335 - root - INFO - Checking again with Claude
+2024-10-16 00:34:07,688 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:07,691 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:07,696 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:34:07,697 - root - INFO - Updating Google Sheets
+2024-10-16 00:34:10,164 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:34:10,166 - root - INFO - Saved 25 scraped URLs to scraped_urls.json
+2024-10-16 00:34:10,167 - root - INFO - Processed 1 paragraphs for row 1. Total scraped: 1/5
+2024-10-16 00:34:10,169 - root - INFO - Searching Google for query: "THC" "Sales" "$" "UK"
+2024-10-16 00:34:13,637 - root - INFO - Fetched 4 new links from Google page 1
+2024-10-16 00:34:13,638 - root - INFO - Total new Google search results found: 4
+2024-10-16 00:34:13,639 - root - INFO - Fetching content from URL: https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-16 00:34:16,105 - root - INFO - Fetched 184 characters of text from https://www.quora.com/Why-is-the-UK-still-not-legalising-recreational-cannabis
+2024-10-16 00:34:16,110 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:34:18,227 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:34:18,234 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:34:19,685 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:19,687 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:19,687 - root - INFO - Checking again with Claude
+2024-10-16 00:34:21,138 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:21,141 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:21,142 - root - INFO - Fetching content from URL: https://www.independent.co.uk/news/uk/home-news/uk-cannabis-market-skunk-drug-strength-weed-spice-street-sales-dealers-a8231426.html
+2024-10-16 00:34:25,598 - root - INFO - Fetched 10330 characters of text from https://www.independent.co.uk/news/uk/home-news/uk-cannabis-market-skunk-drug-strength-weed-spice-street-sales-dealers-a8231426.html
+2024-10-16 00:34:25,602 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:34:28,199 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:34:28,214 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:34:30,712 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:30,715 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:30,716 - root - INFO - Checking again with Claude
+2024-10-16 00:34:36,894 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:36,896 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:36,938 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:34:36,939 - root - INFO - Updating Google Sheets
+2024-10-16 00:34:37,612 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:34:37,615 - root - INFO - Saved 26 scraped URLs to scraped_urls.json
+2024-10-16 00:34:37,617 - root - INFO - Processed 1 paragraphs for row 2. Total scraped: 1/5
+2024-10-16 00:34:37,618 - root - INFO - Fetching content from URL: https://lyphe.com/how-much-is-weed/
+2024-10-16 00:34:40,372 - root - INFO - Fetched 26263 characters of text from https://lyphe.com/how-much-is-weed/
+2024-10-16 00:34:40,375 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:34:43,209 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:34:43,214 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:34:45,520 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:45,523 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:45,524 - root - INFO - Checking again with Claude
+2024-10-16 00:34:50,261 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:34:50,262 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:34:50,284 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:34:50,285 - root - INFO - Updating Google Sheets
+2024-10-16 00:34:51,305 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:34:51,307 - root - INFO - Saved 27 scraped URLs to scraped_urls.json
+2024-10-16 00:34:51,308 - root - INFO - Processed 2 paragraphs for row 2. Total scraped: 2/5
+2024-10-16 00:34:51,309 - root - INFO - Fetching content from URL: https://www.kingsleynapley.co.uk/insights/blogs/regulatory-blog/court-of-appeal-ruling-raises-hope-for-clarification-on-cbd-legal-status
+2024-10-16 00:34:54,751 - root - INFO - Fetched 15082 characters of text from https://www.kingsleynapley.co.uk/insights/blogs/regulatory-blog/court-of-appeal-ruling-raises-hope-for-clarification-on-cbd-legal-status
+2024-10-16 00:34:54,754 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:34:57,293 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:34:57,297 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:35:01,512 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:35:01,515 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:35:01,544 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:35:01,544 - root - INFO - Updating Google Sheets
+2024-10-16 00:35:02,513 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:35:02,515 - root - INFO - Saved 28 scraped URLs to scraped_urls.json
+2024-10-16 00:35:02,515 - root - INFO - Processed 3 paragraphs for row 2. Total scraped: 3/5
+2024-10-16 00:35:02,517 - root - INFO - Searching Google for query: "THC" "Sales" "$" "Pakistan"
+2024-10-16 00:35:06,037 - root - INFO - Fetched 2 new links from Google page 1
+2024-10-16 00:35:06,038 - root - INFO - Total new Google search results found: 2
+2024-10-16 00:35:06,039 - root - INFO - Fetching content from URL: https://www.na.gov.pk/uploads/documents/1573482018_650.pdf
+2024-10-16 00:35:10,550 - root - INFO - PDF detected: https://www.na.gov.pk/uploads/documents/1573482018_650.pdf
+2024-10-16 00:35:10,551 - root - INFO - Extracting text from PDF
+2024-10-16 00:35:10,758 - root - INFO - Extracted 7668 characters from PDF
+2024-10-16 00:35:10,760 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:35:14,192 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:35:14,195 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:35:16,126 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:35:16,129 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:35:16,130 - root - INFO - Checking again with Claude
+2024-10-16 00:35:18,164 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:35:18,167 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:35:18,168 - root - INFO - Fetching content from URL: https://ethnobotanyjournal.org/index.php/era/article/download/3799/1491/36127
+2024-10-16 00:36:17,314 - bs4.dammit - WARNING - Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2024-10-16 00:36:17,357 - root - INFO - Fetched 1871760 characters of text from https://ethnobotanyjournal.org/index.php/era/article/download/3799/1491/36127
+2024-10-16 00:36:17,360 - root - INFO - Extracting relevant Data with OpenAI
+2024-10-16 00:36:20,901 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-16 00:36:20,910 - root - INFO - Extracting relevant paragraph with Claude
+2024-10-16 00:36:24,857 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:36:24,860 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:36:24,861 - root - INFO - Checking again with Claude
+2024-10-16 00:36:32,697 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-16 00:36:32,701 - root - INFO - Paragraph extracted with Claude
+2024-10-16 00:36:32,732 - root - INFO - Added 1 new rows to search_results.csv
+2024-10-16 00:36:32,733 - root - INFO - Updating Google Sheets
+2024-10-16 00:36:33,773 - root - INFO - Updated 11 cells in Google Sheets
+2024-10-16 00:36:33,774 - root - INFO - Saved 29 scraped URLs to scraped_urls.json
+2024-10-16 00:36:33,775 - root - INFO - Processed 1 paragraphs for row 3. Total scraped: 1/5
+2024-10-16 00:36:33,776 - root - INFO - Web scraper finished
