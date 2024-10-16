@@ -13,10 +13,8 @@ import requests
 import traceback
 import anthropic
 import urllib.parse
-from enum import Enum
 from io import BytesIO
 from openai import OpenAI
-from base64 import b64decode
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from typing import List, Optional
@@ -463,41 +461,40 @@ async def check_again_in_claude(text: str, query: str, instructions: str) -> str
     
 # ---------------------- OpenAI Paragraph Extraction ----------------------
 class ParagraphResponse(BaseModel):
-    content: str   # The extracted paragraph
-    date: str # The publishing date of the article
-    source: str  # The source of the extracted paragraph (the organization or authority who published the article)
-    numeric_value: float  # Any numeric value in the paragraph
-    type: str  # The type of the numeric value
-    country: str # The country related to the article
-    author: str # The author of the article
+    content: Optional[str] = Field(description="Extract a paragraph which is most relevant to the given Query.")  # The extracted paragraph
+    title: Optional[str] = Field(description="The title of the article")  # The title of the article
+    subtitle: Optional[str] = Field(description="The subtitle of the article")  # The subtitle of the article
+    score: Optional[float] = Field(description="Return relevancy score out of 100 how much the paragraph you extracted is relevant to the given query")  # The relevancy score of the paragraph
+    keywords: Optional[List[str]] = Field(description='["Comma-separated list of keywords (array of strings)"]')  # The keywords of the article
+    category: Optional[str] = Field(description="The main category of the article")  # The category of the article
+    date: Optional[str] = Field(description="The publishing date (ISO 8601 format, e.g., \'2024-03-15T14:30:00\')")  # The publishing date of the article
+    source: Optional[str] = Field(description="Return the source of the article, eg: the authority who released the info or organization which did the resarch etc like these: U.S. Food and Drug Administration (FDA), U.S. Department of Agriculture (USDA), Canadian Cannabis Growers Association, Statistics Canada, Oregon Liquor Control Commission. These are the authorities/organizations")  # The source of the extracted paragraph
+    numeric_value: Optional[float] = Field(description='"A relevant numeric value or quantity from the content (number)"')  # Any numeric value in the paragraph
+    unit: Optional[str] = Field(description="The unit of measurement for the extracted numeric value. For example, if '4.7 billion' is found in the article, return 'billion'. For '$14 million', return 'million'. For '73.5%', return 'percent'. Always return the unit in words, not symbols. If there's no unit (e.g., just a plain number), return 'count' or leave it empty.")
+    type: Optional[str] = Field(description='"The type of the numeric value (e.g., \'revenue\', \'users\', \'sales\') (string)",\n')  # The type of the numeric value
+    country: Optional[str] = Field(description="The primary country related to the article")  # Specific country related to the article
+    location: Optional[str] = Field(description="Any specific location within the country mentioned in the article")  # Any Specific location within the country mentioned in the article
+    author: Optional[str] = Field(description="The author of the article")  # The author of the article
+    references: Optional[List[str]] = Field(description='["Any references or citations in the article"]')  # Any references or citations in the article
+    
 
 def extract_relevant_data(text: str, query: str, instructions: str) -> ParagraphResponse:
     logger.info("Extracting relevant Data with OpenAI")
     system_prompt = (
         "You are an advanced data extraction assistant. Your task is to read the provided text thoroughly, "
-        "analyze each paragraph, and extract information relevant to the given query and instructions. "
+        "analyze each paragraph, and extract a paragraph and information relevant to the given query and instructions. "
         "Focus particularly on paragraphs that include numerical data such as Users, Sales, Revenues, Turnover, "
         "Stores, Dispensaries, Licenses, Pounds, Ounces, or similar metrics. Your goal is to extract the most "
         "pertinent information that aligns with the given criteria and structure it according to the specified format."
         
     )
-
-
     user_prompt = (
         f"Query: '{query}'\n"
         f"Instructions: {instructions if instructions else 'No specific instructions provided.'}\n\n"
-        f"Text: {text[:25000]}\n\n"  # Limiting to first 15000 characters
-        "Please extract and return the following information in JSON format:\n"
-        "- content: The most relevant paragraph (string), It should be a proper and solid paragraph\n"
-        "- date: The publishing date of the article (ISO 8601 format, e.g., '2024-03-15T14:30:00')\n"
-        "- source: The source of the extracted paragraph (string)\n"
-        "- numeric_value: A relevant numeric value from the paragraph (float)\n"
-        "- type: The type of the numeric value (e.g., 'revenue', 'users', 'sales', etc.) (string)\n"
-        "- country: The country related to the article (string)\n"
-        "- author: The author of the article (string)\n"
-        "Ensure all fields are present, using null if information is not available."
+        f"Text: {text[:25000]}\n\n"
+        "Extract and return the information in JSON format:\n"
+        "Ensure all fields are present. Use '--' for unavailable information. Do not include any explanations or additional text outside the JSON structure."
     )
-
 
     try:
         response = client.beta.chat.completions.parse(
@@ -509,7 +506,9 @@ def extract_relevant_data(text: str, query: str, instructions: str) -> Paragraph
             response_format=ParagraphResponse,        
         )
         result = response.choices[0].message.parsed
-        return result if result else {"content": "None"}
+        if result.content is None:
+            result.content = 'None'
+        return result
     except Exception as e:
         logger.error(f"Error calling OpenAI API: {e}")
         return "None"
@@ -525,26 +524,13 @@ def check_again_in_openai(text: str, query: str, instructions: str) -> str:
         "pertinent information that aligns with the given criteria and structure it according to the specified format."
         "I am 100% sure that a relevant paragraph exists in the text. Please extract the most relevant paragraph."
     )
-
     user_prompt = (
         f"Query: '{query}'\n"
         f"Instructions: {instructions if instructions else 'No specific instructions provided.'}\n\n"
-        f"Text: {text[:15000]}\n\n"  # Limiting to first 15000 characters
-        "Please extract and return the following information in JSON format:\n"
-        "- content: The most relevant paragraph (string), It should be a proper and solid paragraph\n"
-        "- date: The publishing date of the article (ISO 8601 format, e.g., '2024-03-15T14:30:00')\n"
-        "- source: The source of the extracted paragraph (string)\n"
-        "- numeric_value: A relevant numeric value from the paragraph (float)\n"
-        "- type: The type of the numeric value (e.g., 'revenue', 'users', 'sales', etc.) (string)\n"
-        "- country: The country related to the article (string)\n"
-        "- author: The author of the article (string)\n"
-        "Ensure all fields are present, using null if information is not available."
+        f"Text: {text[:25000]}\n\n"
+        "Extract and return the information in JSON format:\n"
+        "Ensure all fields are present. Use '--' for unavailable information. Do not include any explanations or additional text outside the JSON structure."
     )
-
-    message = [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": user_prompt}
-    ]
 
     try:
         response = client.beta.chat.completions.parse(
@@ -553,10 +539,12 @@ def check_again_in_openai(text: str, query: str, instructions: str) -> str:
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            response_format=ParagraphResponse,
+            response_format=ParagraphResponse,        
         )
         result = response.choices[0].message.parsed
-        return result if result else {"content": "None"}
+        if result.content is None:
+            result.content = 'None'
+        return result 
     except Exception as e:
         logger.error(f"Error calling OpenAI API: {e}")
         return "None"
@@ -573,7 +561,7 @@ def save_to_csv(filename: str, data: List[List[str]]):
         with open(filename, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.reader(file)
             first_row = next(reader, None)
-            if first_row == ["Keywords", "Link", "Relevant Paragraph", "Claude Paragraph"]:
+            if first_row == ["Keywords", "Link", "Claude Paragraph", "Relevant Paragraph", 'Title', 'Relevancy Score', 'Keywords', 'Category', 'Date', 'Source', 'Numeric Value', 'Unit', 'Type', 'Country', 'Location', 'Author', 'References']:
                 header_exists = True
             else:
                 file.seek(0)  # Reset file pointer to beginning
@@ -586,7 +574,7 @@ def save_to_csv(filename: str, data: List[List[str]]):
 
         # Write header if file is new or doesn't have the header
         if not file_exists or not header_exists:
-            writer.writerow(["Keywords", "Link", "Relevant Paragraph", "Claude Paragraph"])
+            writer.writerow(["Keywords", "Link", "Claude Paragraph", "Relevant Paragraph", 'Title', 'Relevancy Score', 'Keywords', 'Category', 'Date', 'Source', 'Numeric Value', 'Unit', 'Type', 'Country', 'Location', 'Author', 'References'])
 
         # Write new, non-duplicate data
         new_rows = 0
@@ -603,7 +591,7 @@ def save_to_csv(filename: str, data: List[List[str]]):
 async def update_in_sheets(service, data: List[List[str]]):
     logger.info("Updating Google Sheets")
     try:
-        values = [row + [datetime.datetime.now().isoformat()] for row in data]
+        values = [row for row in data]
         body = {'values': values}
         result = service.spreadsheets().values().append(
             spreadsheetId=SPREADSHEET_ID,
@@ -736,7 +724,21 @@ async def main():
                 
                         if (relevant_data.content.lower() != "none") and (claude_paragraph.lower() != "none"):
                             
-                            data_row = [keywords, link, claude_paragraph.replace('\n', ' '), relevant_data.content.replace('\n', ' '), relevant_data.date, relevant_data.source, relevant_data.numeric_value, relevant_data.type, relevant_data.country, relevant_data.author]
+                            paragraph = relevant_data.content
+                            title = relevant_data.title
+                            score = relevant_data.score
+                            new_keywords = ', '.join(relevant_data.keywords) if relevant_data.keywords else "-"
+                            category = relevant_data.category
+                            date = relevant_data.date
+                            source = relevant_data.source
+                            numeric_value = relevant_data.numeric_value
+                            unit = relevant_data.unit
+                            type = relevant_data.type
+                            country = relevant_data.country
+                            location = relevant_data.location
+                            author = relevant_data.author
+                        
+                            data_row = [keywords, link, claude_paragraph.replace('\n', ' '), paragraph.replace('\n', ' '), title, score, new_keywords, category, date, source, numeric_value, unit, type, country, location, author]
 
                             # Save to CSV
                             save_to_csv("search_results.csv", [data_row])
