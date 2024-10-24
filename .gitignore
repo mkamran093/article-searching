@@ -1,6 +1,7 @@
-credentials.json
+logs/
 .env
+credentials.json
+scraped_urls.json
+test.py
 token.json
 search_results.csv
-test.py
-main2.py
