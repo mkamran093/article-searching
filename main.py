@@ -165,22 +165,21 @@ async def get_google_search_results(query: str, start_date: str, end_date: str,
     """
     start_date = start_date.replace('-', '/')
     end_date = end_date.replace('-', '/')
-
-    d1, m1, y1 = start_date.split('/')
-    d2, m2, y2 = end_date.split('/')
+    query_parts = query.lower().split()
+    query_edited = '+'.join(urllib.parse.quote(part) for part in query_parts)
     try:
         logger.info(f"Searching Google for query: {query}")
         # query_encoded = urllib.parse.quote_plus(f"{query} after:{start_date} before:{end_date}")
-        query_encoded = f"https://www.google.com/search?q=%27%22THC%22+%22Sales%22+%22%24%22+%22UK%22%27&sca_esv=63099308d1ada3ea&rlz=1C1CHBD_en-GBPK1108PK1108&source=lnt&tbs=cdr%3A1%2Ccd_min%3A{d1}%2F{m1}%2F{y1}%2Ccd_max%3A{d2}%2F{m2}%2F{y2}&tbm="
         new_results = []
         current_page = 0
 
-        while current_page < max_pages:
+        while len(new_results) < num_results:
+            query_encoded = f"%27{query_edited}%27&sca_esv=47b2934ea174e9e2&rlz=1C1CHBD_en-GBPK1108PK1108&tbs=cdr:1,cd_min:{start_date},cd_max:{end_date}&ei=95YaZ5uUBbnbptQPi53AqQc&start={current_page*10}"
             async with google_semaphore:
                 await asyncio.sleep(GOOGLE_RATE_LIMIT)  # Rate limiting
 
-                start = current_page * 10  # Google uses 'start' parameter for pagination
-                url = f"https://www.google.com/search?q={query_encoded}&num=10&start={start}"
+                # start = current_page * 10  # Google uses 'start' parameter for pagination
+                url = f"https://www.google.com/search?q={query_encoded}" #&num=10&start={start}"
                 headers = {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                                   'AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -205,12 +204,9 @@ async def get_google_search_results(query: str, start_date: str, end_date: str,
                         filtered = [link for link in results if link not in scraped_urls]
                         new_results.extend(filtered)
 
-                        logger.info(f"Fetched {len(filtered)} new links from Google page {current_page + 1}")
+                        logger.info(f"Fetched {len(filtered)} new links from Google page {current_page}")
 
-                        if len(new_results) >= num_results:
-                            break
-
-                current_page += 1
+            current_page += 1
 
         logger.info(f"Total new Google search results found: {len(new_results)}")
         return new_results[:num_results]
@@ -251,9 +247,7 @@ async def get_bing_search_results(query: str, start_date: str, end_date: str,
                             logger.error(f"Bing search failed with status code: {response.status}")
                             break  # Stop trying Bing if a page fails
 
-                        html = await response.text()
-                        with open('bing.html', 'w') as f:
-                            f.write(html)   
+                        html = await response.text()  
                         soup = BeautifulSoup(html, 'html.parser')
                         results = [item['href'] for item in soup.find_all('a', href=True)
                                    if item['href'].startswith('http')]
@@ -278,44 +272,45 @@ async def get_bing_search_results(query: str, start_date: str, end_date: str,
     except Exception as e:
         logger.error(f"Bing search failed: {e}")
         return []
+
 # ---------------------- Content Fetching Functions ----------------------
 
-# async def fetch_content_from_url(url: str) -> Optional[str]:
-#     logger.info(f"Fetching content from URL: {url}")
-#     try:
-#         api_response = requests.post(
-#             "https://api.zyte.com/v1/extract",
-#             auth=(ZYTE_API_KEY, ""),
-#             json={
-#                 "url": url,
-#                 "httpResponseBody": True,
-#             },
-#         )
-#         api_response.raise_for_status()
-#         response_json = api_response.json()
+async def fetch_content_with_zyte(url: str) -> Optional[str]:
+    logger.info(f"Fetching content from URL: {url}")
+    try:
+        api_response = requests.post(
+            "https://api.zyte.com/v1/extract",
+            auth=(ZYTE_API_KEY, ""),
+            json={
+                "url": url,
+                "httpResponseBody": True,
+            },
+        )
+        api_response.raise_for_status()
+        response_json = api_response.json()
         
-#         if "httpResponseBody" not in response_json:
-#             logger.error("Error: 'httpResponseBody' not found in API response")
-#             logger.error(f"API Response: {response_json}")
-#             return None
+        if "httpResponseBody" not in response_json:
+            logger.error("Error: 'httpResponseBody' not found in API response")
+            logger.error(f"API Response: {response_json}")
+            return None
         
-#         http_response_body: bytes = base64.b64decode(response_json["httpResponseBody"])
+        http_response_body: bytes = base64.b64decode(response_json["httpResponseBody"])
         
-#         if url.lower().endswith('.pdf'):
-#             logger.info(f"PDF detected: {url}")
-#             return await extract_text_from_pdf(http_response_body)
+        if url.lower().endswith('.pdf'):
+            logger.info(f"PDF detected: {url}")
+            return await extract_text_from_pdf(http_response_body)
         
-#         soup = BeautifulSoup(http_response_body, 'html.parser')
-#         text = soup.get_text(separator=' ', strip=True)
-#         logger.info(f"Fetched {len(text)} characters of text from {url}")
-#         return text
-#     except requests.RequestException as e:
-#         logger.error(f"Request error while fetching {url}: {e}")
-#     except ValueError as e:
-#         logger.error(f"JSON decoding error for {url}: {e}")
-#     except Exception as e:
-#         logger.error(f"An unexpected error occurred while fetching {url}: {e}")
-#     return None
+        soup = BeautifulSoup(http_response_body, 'html.parser')
+        text = soup.get_text(separator=' ', strip=True)
+        logger.info(f"Fetched {len(text)} characters of text from {url}")
+        return text
+    except requests.RequestException as e:
+        logger.error(f"Request error while fetching {url}: {e}")
+    except ValueError as e:
+        logger.error(f"JSON decoding error for {url}: {e}")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred while fetching {url}: {e}")
+    return None
 
 async def fetch_content_from_url(url: str) -> Optional[str]:
     """
@@ -376,8 +371,7 @@ async def extract_text_from_pdf(pdf_content: bytes) -> str:
         
 # ---------------------- OpenAI Paragraph Extraction ----------------------
 class ParagraphResponse(BaseModel):
-    found: Optional[bool] = Field(description="Whether a relevant paragraph was found in the content. If the content you extracted is faulty, return False")  # Whether a relevant paragraph was found in the content
-    content: Optional[str] = Field(description="Extract a paragraph which is most relevant to the given Query.")  # The extracted paragraph
+    content: Optional[str] = Field(description="Extract a paragraph which is most relevant to the given Query. Return only if the paragraph(content) is from an article otherwise empty")  # The extracted paragraph
     title: Optional[str] = Field(description="The title of the article")  # The title of the article
     subtitle: Optional[str] = Field(description="The subtitle of the article")  # The subtitle of the article
     score: Optional[float] = Field(description="Return relevancy score out of 100 how much the paragraph you extracted is relevant to the given query")  # The relevancy score of the paragraph
@@ -393,7 +387,6 @@ class ParagraphResponse(BaseModel):
     author: Optional[str] = Field(description="The author of the article")  # The author of the article
     references: Optional[List[str]] = Field(description='["Any references or citations in the article"]')  # Any references or citations in the article
     
-
 def extract_relevant_data(text: str, query: str, instructions: str) -> ParagraphResponse:
     logger.info("Extracting relevant Data with OpenAI")
     system_prompt = (
@@ -423,7 +416,7 @@ def extract_relevant_data(text: str, query: str, instructions: str) -> Paragraph
         )
         result = response.choices[0].message.parsed
         if result.content is None:
-            check_again_in_openai(text, query, instructions)
+            return check_again_in_openai(text, query, instructions)
         return result
     except Exception as e:
         logger.error(f"Error calling OpenAI API: {e}")
@@ -475,7 +468,7 @@ def check_again_in_openai(text: str, query: str, instructions: str) -> Paragraph
         )
         result = response.choices[0].message.parsed
         if result.content is None:
-            result.content = 'None'
+            return None
         return result
     except Exception as e:
         logger.error(f"Error calling OpenAI API: {e}")
@@ -625,49 +618,41 @@ async def main():
                     continue
 
                 # Fetch search results in batches of 10 pages
-                new_links = []
+                page = 1
                 while remaining_paragraphs > 0:
                     links = await get_google_search_results(
+                    # links = await get_bing_search_results(
                         keywords,
                         start_date,
                         end_date,
                         num_results=10,  # Fetch enough to cover multiple batches
                         scraped_urls=scraped_urls,
-                        max_pages=1
+                        max_pages=page
                     )
                     if not links:
-                        logger.info(f"No new links found for row {index}. Skipping to next row.")
-                        break
-                        
-                    new_links.extend(links)
-                    break  # Exit after fetching a batch
-
-                if not new_links:
-                    continue
-
-                processed_paragraphs = 0
-                for link in new_links:
-                    if link in scraped_urls:
-                        logger.info(f"URL already scraped: {link}. Skipping.")
                         continue
+                    
+                    processed_paragraphs = 0
+                    for link in links:
+                        if link in scraped_urls:
+                            logger.info(f"URL already scraped: {link}. Skipping.")
+                            continue
 
-                    if processed_paragraphs >= remaining_paragraphs:
-                        break
-
-                    content = await fetch_content_from_url(link)
-                    if content:
+                        content = await fetch_content_from_url(link)
+                    
+                        if not content:
+                            content = await fetch_content_with_zyte(link)
+                            if not content:
+                                logger.error(f"Failed to fetch content from URL: {link}. Skipping.")
+                                continue
+                            
                         relevant_data = extract_relevant_data(content, keywords, instructions) 
 
-                        if (relevant_data.content == "None"):
-                            relevant_data = check_again_in_openai(content, keywords, instructions)
-
-                        if (relevant_data.content == "None"):
+                        if relevant_data is None:
                             print('Not found any Data')
                             # Add to scraped URLs and save immediately
                             scraped_urls.add(link)
                             save_scraped_urls(scraped_urls)
-
-                            logger.info(f"No relevant paragraph found for URL: {link}")
                             continue
                 
                         paragraph = relevant_data.content
@@ -683,7 +668,7 @@ async def main():
                         country = relevant_data.country
                         location = relevant_data.location
                         author = relevant_data.author
-                    
+
                         data_row = [keywords, link, paragraph.replace('\n', ' '), title, score, new_keywords, category, date, source, numeric_value, unit, type, country, location, author]
 
                         # Save to CSV
@@ -695,6 +680,8 @@ async def main():
                         # Add to scraped URLs and save immediately
                         scraped_urls.add(link)
                         processed_paragraphs += 1
+                        remaining_paragraphs -= 1
+                        page += 1
                         save_scraped_urls(scraped_urls)
                         scraped_counter += 1
                         await update_scraped_counter(service, index, scraped_counter)
@@ -711,9 +698,9 @@ async def main():
 
                         logger.info(
                             f"Processed {processed_paragraphs} paragraphs for row {index}. Total scraped: {scraped_counter}/{paragraph_count}")
-                if processed_paragraphs < remaining_paragraphs:
-                    # Repeat for the same row
-                    pass
+        
+                        if remaining_paragraphs <= 0:
+                            break
             except Exception as e:
                 logger.error(f"Error processing row {index}: {e}")
                 logger.error(traceback.format_exc())
